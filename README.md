@@ -7,8 +7,8 @@
 
 Показания к применению:
 
-Скачать и установить автохоткей (https://www.autohotkey.com/ "ССЫЛКА")
+- Скачать и установить автохоткей [autohotkey.com](https://www.autohotkey.com)
 
-Скачать репозиторий (зеленая кнопка Code > Download Zip)
+- Скачать репозиторий (зеленая кнопка Code > Download Zip)
 
-Запустить Genshi AHK Flex.ahk
+- Запустить Genshi AHK Flex.ahk
