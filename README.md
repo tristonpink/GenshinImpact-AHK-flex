@@ -1,2 +1,2 @@
-# # Аццкий жосцкий AHK скрипт для Gayshit Impact
+# Аццкий жосцкий AHK скрипт для Gayshit Impact
 
