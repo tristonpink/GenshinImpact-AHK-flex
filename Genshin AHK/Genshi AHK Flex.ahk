@@ -1,26 +1,18 @@
-﻿ ;F1	+ Три карты
+ ;F1	+ Три карты
  ;F		+-Фаст лут
  ;Z		. Скип диалогов
  ;F3	. Автоходьба
  ;Space	+ Банихоп для станов
  ;F2	+-Оверлей с подсказками управления
  ;		. Отключить С'ЖАй кастсцены, если есть ветка в реестре
- ;		. Рапидфаер
  ;		. Ведьмачье чутье
-if not A_IsAdmin
-{
-   Run *RunAs "%A_ScriptFullPath%"
-   sleep 100
-   ExitApp
-}
 ;===============================дерективы
 #NoEnv
 SendMode Input
 SetWorkingDir %A_ScriptDir%
 setbatchlines,-1
-PID := DllCall("GetCurrentProcessId")
-Process, Priority, %PID%, High
-SetKeyDelay,-1, 8
+Process, Priority,, High
+SetKeyDelay,-1, -1
 SetControlDelay, -1
 SetMouseDelay, 0
 SetWinDelay,-1
@@ -40,6 +32,8 @@ IniRead, key_vi4er_sens, data\genConfig.ini, Binds, key_vi4er_sens
 IniRead, key_rapidfire, data\genConfig.ini, Binds, key_rapidfire ; 
 
 ;====================Подгрузка конфига: основные
+IniRead, Brauzer, data\genConfig.ini, Setings, Brauzer ; выбор браузера
+
 IniRead, Map2toggle, data\genConfig.ini, Setings, map
 IniRead, sliderw, data\genConfig.ini, Setings, sliderw ; положение слайдера в гуи
 IniRead, ONrapidfire, data\genConfig.ini, Setings, ONrapidfire ; рапидфаер вкл-выкл
@@ -63,16 +57,16 @@ If (ONregreadDir == 0)
 DirVarGensh = %DirGame%
 }
 
-
-If (ONrapidfire == 1) ; Если в конфиге рапидфаер вкл, то:
-{
+;Убрать рапидфаер
+;If (ONrapidfire == 1) ; Если в конфиге рапидфаер вкл, то:
+;{
 ;=====================Реестр рапидфаер сейв
-RegWrite, REG_DWORD, HKEY_LOCAL_MACHINE, SOFTWARE\AHKflexGenshi, GUID, 1 ;записать в начале
-sleep 100
+;RegWrite, REG_DWORD, HKEY_LOCAL_MACHINE, SOFTWARE\AHKflexGenshi, GUID, 1 ;записать в начале
+;sleep 100
 ;======================запустить 2й поток для отзывчивости рапидфаера
-Run data\New-Thread.ahk
-Hotkey, Rbutton, Metkakey_rapidfire, on ; рапидфаер вкл
-}
+;Run data\New-Thread.ahk
+;Hotkey, Rbutton, Metkakey_rapidfire, on ; рапидфаер вкл
+;}
 
 ;====================Положить хоткей в конфиг
 Hotkey, ~%key_bhop%, Metkakey_bhop, on
@@ -89,6 +83,7 @@ Menu,Tray,DeleteAll
 Menu,Tray, add, Setings, MetkaMenu1
 Menu,Tray, Default , Setings
 Menu,Tray, add
+Menu,Tray, add, Reload, MetkaMenu3
 Menu,Tray, add, Info, MetkaMenu2
 Menu,Tray, add, Exit, MetkaMenu0
 Menu Tray, Icon, data\genicon.ico
@@ -119,8 +114,8 @@ Gui, 1: Add, Text, x88 y216 w103 h23 +0x200 vText5, Скип диалогов
 Gui, 1: Add, Hotkey, x16 y192 w61 h21 vkey_fastlyt, %key_fastlyt%
 Gui, 1: Add, Text, x88 y192 w103 h23 +0x200 vText6, Фастлут
 Gui, 1: Add, Edit, x16 y240 w61 h21 +Disabled vkey_rapidfire, %key_rapidfire%
-Gui, 1: Add, Text, hWndhTxt7 x136 y240 w66 h23 +0x200 vText7, Рапидфаер
-Gui, 1: Add, CheckBox, vCheckboxRaFi x88 y240 w45 h23 Checked%ONrapidfire%, ON
+Gui, 1: Add, Text, hWndhTxt7 x136 y240 w66 h23 +Disabled +0x200 vText7, Рапидфаер
+Gui, 1: Add, CheckBox, vCheckboxRaFi x88 y240 w45 h23 +Disabled Checked%ONrapidfire%, ON
 
 Gui, 1: Add, Hotkey, x16 y264 w61 h21 vkey_vi4er_sens, %key_vi4er_sens%
 Gui, 1: Add, Text, x88 y264 w105 h23 +0x200 vText8, Ведьмачье чутье
@@ -204,7 +199,7 @@ return
 Metkakey_bhop:
 IfWinActive, %gameexe1337%		;ahk_exe GenshinImpact.exe
 {
-Sleep 160
+Sleep 210
 Loop
 {
     GetKeyState, SpaceVar1, Space, P
@@ -231,7 +226,7 @@ WinActivate ahk_group GroupNameMap1337 ;сделать окно карты ак�
 	}
 IfWinNotExist, ahk_group GroupNameMap1337 ;если окно карты не найдено то..
 	{
-run_path	:= "chrome.exe -maximized"
+run_path	= %Brauzer% -maximized
 Run,%run_path%  %run_param% ;подрубить хром и завести карту
 loop 7
 {
@@ -273,7 +268,7 @@ return
 Metkakey_fastlyt:
 IfWinActive, %gameexe1337%
 {
-Sleep 75
+Sleep 100
 Loop
 {
     GetKeyState, SpaceVar2, F, P
@@ -288,7 +283,7 @@ return
 ;===============================Автоходьба
 Metkakey_autowalk:
 sleep 50
-sendplay {W down}
+SendInput {W down}
 return
 ;===============================Скип диалогов
 Metkakey_skipNPS:
@@ -300,7 +295,7 @@ Loop
     GetKeyState, SpaceVar2, Z, P
     If SpaceVar2 = U
         break 
-    Sleep 1
+    Sleep 15
 Click %xSkip% %ySkip%
 }
 }
@@ -353,7 +348,7 @@ IniWrite, %sliderw%, data\genConfig.ini, Setings, sliderw
 
 IniWrite, %CheckboxRegDir%, data\genConfig.ini, Setings, ONregreadDir
 IniWrite, %CheckboxRaFi%, data\genConfig.ini, Setings, ONrapidfire
-WinClose, %A_ScriptDir%\data\New-Thread.ahk ahk_class AutoHotkey
+;WinClose, %A_ScriptDir%\data\New-Thread.ahk ahk_class AutoHotkey
 Reload
 Return
 
@@ -539,35 +534,35 @@ zaglushka:=1
 }
 Return
 
-~WheelUp::
-RegWrite, REG_DWORD, HKEY_LOCAL_MACHINE, SOFTWARE\AHKflexGenshi, GUID, 1
-sleeper1:=1
-return
-~WheelDown::
-RegWrite, REG_DWORD, HKEY_LOCAL_MACHINE, SOFTWARE\AHKflexGenshi, GUID, 1800
-sleeper1:=1800
-return
+;~WheelUp::
+;RegWrite, REG_DWORD, HKEY_LOCAL_MACHINE, SOFTWARE\AHKflexGenshi, GUID, 1
+;sleeper1:=1
+;return
+;~WheelDown::
+;RegWrite, REG_DWORD, HKEY_LOCAL_MACHINE, SOFTWARE\AHKflexGenshi, GUID, 1800
+;sleeper1:=1800
+;return
 
 
-Metkakey_rapidfire:
-IfWinActive, %gameexe1337%
-{
-Sendplay {R}
-sleep 1
-Loop
-{
-    GetKeyState, RButtonVar2, RButton, P
-    If RButtonVar2 = U
-        break
-	sleep 1
-}
-Sendplay {R}
-}
-IfWinNotActive, %gameexe1337%
-{
-SendInput {RButton}
-}
-return
+;Metkakey_rapidfire:
+;IfWinActive, %gameexe1337%
+;{
+;Sendplay {R}
+;sleep 1
+;Loop
+;{
+;    GetKeyState, RButtonVar2, RButton, P
+;    If RButtonVar2 = U
+;        break
+;	sleep 1
+;}
+;Sendplay {R}
+;}
+;IfWinNotActive, %gameexe1337%
+;{
+;SendInput {RButton}
+;}
+;return
 
 
 
@@ -619,17 +614,22 @@ Return
 
 
 
-
+MetkaMenu3:
+Reload
+sleep 100
+Exitapp
+Return
 
 
 
 MetkaMenu0:
-WinClose, %A_ScriptDir%\data\New-Thread.ahk ahk_class AutoHotkey
+;WinClose, %A_ScriptDir%\data\New-Thread.ahk ahk_class AutoHotkey
+;рапидфаер не зашел
 sleep 100
 exitapp
 Return
 MetkaMenu2:
-MsgBox Gayshit Impact AHK flex by Kramar1337`n`nF1 - Карта`nF2 - Оверлей`nF3 - Автоходьба`nF - Фастлут`nZ - Скип диалогов`nX - Ведьмачье чутье`nSpace - Банихоп`nRButton - Рапидфаер`nHome - Перезагрузка`nEnd - Завершить работу скрипта
+MsgBox Gayshit Impact AHK flex by Kramar1337`n`nF1 - Карта`nF2 - Оверлей`nF3 - Автоходьба`nF - Фастлут`nZ - Скип диалогов`nX - Ведьмачье чутье`nSpace - Банихоп`nHome - Перезагрузка`nEnd - Завершить работу скрипта
 Return
 
 
@@ -638,7 +638,11 @@ Return
 
 *~$Home::
 Reload
+sleep 100
+Exitapp
+Return
 *~$End::
-WinClose, %A_ScriptDir%\data\New-Thread.ahk ahk_class AutoHotkey
+;WinClose, %A_ScriptDir%\data\New-Thread.ahk ahk_class AutoHotkey
+;рапидфаер не зашел
 sleep 100
 Exitapp
