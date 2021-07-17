@@ -17,6 +17,21 @@ key_bhop=Space
 key_vi4er_sens=X
 key_autoswim=N
 [Setings]
+GlLanguage=0
+ScRenamer=0
+ScWinrenamer=0
+ScHachCh=0
+ScOverlay=0
+ScRandomT=0
+RegeditExport1=
+RegeditExport2=
+RegeditExport3=
+RegeditExport4=
+RegeditCheckBox1=0
+RegeditCheckBox2=0
+RegeditCheckBox3=0
+RegeditCheckBox4=0
+showmegui=1
 Checkbox1map=1
 Checkbox1overlay=1
 Checkbox1autowalk=1
@@ -26,8 +41,9 @@ Checkbox1autoswim=1
 Checkbox1vi4ersens=1
 Checkbox1animcancel=1
 Checkbox1bhop=1
+Checkbox1bhopDelay=1
 
-metodVvoda=3
+metodVvoda=1
 ;Выбор режима ввода 1 - SendInput, 2 - SendPlay, 3 - WinApi
 
 showtooltipVvoba=1

@@ -108,7 +108,7 @@
     },
     {
       "key": "8",
-      "file": "data/soundall/Throne.mid",
+      "file": "data/soundall/Tokyo Ghoul.mid",
       "channel_filter": [],
       "track_filter": [],
       "no_hold": true,
@@ -123,7 +123,7 @@
     },
     {
       "key": "9",
-      "file": "data/soundall/titan.mid",
+      "file": "data/soundall/Tony Igy Ч Astronomia.mid",
       "channel_filter": [],
       "track_filter": [],
       "no_hold": true,
@@ -138,7 +138,7 @@
     },
     {
       "key": "0",
-      "file": "data/soundall/Tokyo Ghoul.mid",
+      "file": "data/soundall/бумер.mid",
       "channel_filter": [],
       "track_filter": [],
       "no_hold": true,
