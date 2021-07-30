@@ -3,7 +3,7 @@
   "songs": [
     {
       "key": "1",
-      "file": "data/soundall/gimn.mid",
+      "file": "data/soundall/GravityFalls.mid",
       "channel_filter": [],
       "track_filter": [],
       "no_hold": true,
@@ -18,7 +18,7 @@
     },
     {
       "key": "2",
-      "file": "data/soundall/GravityFalls.mid",
+      "file": "data/soundall/Imagine dragons - Radioactive.mid",
       "channel_filter": [],
       "track_filter": [],
       "no_hold": true,
@@ -63,21 +63,6 @@
     },
     {
       "key": "5",
-      "file": "data/soundall/potter.mid",
-      "channel_filter": [],
-      "track_filter": [],
-      "no_hold": true,
-      "key_press_duration": 0.01,
-      "skip_start": 0,
-      "root_note": "auto",
-      "auto_root_lowest": 48,
-      "auto_root_highest": 84,
-      "auto_root_use_count": true,
-      "auto_root_use_channels": [],
-      "auto_root_use_tracks": []
-    },
-    {
-      "key": "6",
       "file": "data/soundall/sao.mid",
       "channel_filter": [],
       "track_filter": [],
@@ -92,8 +77,23 @@
       "auto_root_use_tracks": []
     },
     {
-      "key": "7",
+      "key": "6",
       "file": "data/soundall/Saw.mid",
+      "channel_filter": [],
+      "track_filter": [],
+      "no_hold": true,
+      "key_press_duration": 0.01,
+      "skip_start": 0,
+      "root_note": "auto",
+      "auto_root_lowest": 48,
+      "auto_root_highest": 84,
+      "auto_root_use_count": true,
+      "auto_root_use_channels": [],
+      "auto_root_use_tracks": []
+    },
+    {
+      "key": "7",
+      "file": "data/soundall/titan.mid",
       "channel_filter": [],
       "track_filter": [],
       "no_hold": true,

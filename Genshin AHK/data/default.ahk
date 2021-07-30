@@ -43,7 +43,7 @@ Checkbox1animcancel=1
 Checkbox1bhop=1
 Checkbox1bhopDelay=1
 
-metodVvoda=1
+metodVvoda=3
 ;Выбор режима ввода 1 - SendInput, 2 - SendPlay, 3 - WinApi
 
 showtooltipVvoba=1
@@ -61,12 +61,13 @@ GameExe=ahk_class UnityWndClass
 map=1
 ;Выбор интерактивной карты 1 - Mihoyo(Официальная карта михуё), 2 - Genshin-impact-map(Самая первая карта), 3 - Mapgenie.io(Платная карта), 4 - Yuanshen.site(Китайская карта)
 
-ONregreadDir=1
+ONregreadDir=0
 ;Считать путь к игре с реестра автоматически 1 - Да, 0 - Указать путь вручную ниже
 
 DirGame=C:\
 ;Указать путь к игре вручную
 )
+MsgBox После нажатия Ок конфиг будет сброшен
 FileDelete, genConfig.ini
 FileAppend, %def_config_go%, genConfig.ini
 MsgBox Ok
