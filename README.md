@@ -86,7 +86,7 @@ Left - Пролистать оверлей
 Right - Пролистать оверлей
 End - Завершить работу скрипта
 V - Macro Key
-Numpad 0 - Отключить макро
+Numpad 0 - Включить/отключить банихоп
 Numpad 1 - Стрельба на Amber по легиту но нужно быть в движении на +W
 Numpad 2 - Стрельба на Fischl по легиту но нужно быть в движении на +W
 Numpad 3 - Xiangling DragonStrike ?
@@ -105,6 +105,9 @@ Tab + Space - Остановить воспроизведение
 ReShade
 Home - Открыть ReShade меню
 Insert - Включить/отключить ReShade
+
+Windows Shortcut
+CTRL-ALT-Numpad0 - Запустить ярлык GenshAHK.lnk
 ```
 <details>
 <summary>===Последние изменения</summary>
