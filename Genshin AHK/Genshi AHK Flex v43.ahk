@@ -1,9 +1,9 @@
 ﻿; ==============================Genshin AHK by Kramar1337==================
 /*
 AHK
-F1 - Карта
-F2 - Оверлей
-F3 - Автоходьба
+F1 - *Карта
+F2 - *Оверлей
+F3 - *Автоходьба
 F - Фастлут
 Z - Скип диалогов
 X - Ведьмачье чутье (дабл клик вкл, сингл клик выкл)
@@ -12,6 +12,7 @@ Space - Банихоп
 Left - Пролистать оверлей
 Right - Пролистать оверлей
 End - Завершить работу скрипта
+Page Up - *Приостановить-Возобновить работу скрипта
 V - Macro Key
 Numpad 0 - Включить/отключить банихоп
 Numpad 1 - Стрельба на Amber по легиту но нужно быть в движении на +W
@@ -23,6 +24,7 @@ Numpad 6 - Klee Сombo
 Numpad 7 - Diluc+Beidou DragonStrike
 Numpad 8 - Noelle DragonStrike
 Numpad 9 - Eula DragonStrike
+Numpad + - Klee
 
 Python
 Tab + ~(тильт или Ё) - Обновить список мелодий
@@ -38,54 +40,127 @@ CTRL-ALT-Numpad0 - Запустить ярлык GenshAHK.lnk
 
 
 
+
+
+Список карт:
+Карта от официалов
+https://webstatic-sea.mihoyo.com/app/ys-map-sea/
+
+Самая первая карта
+https://genshin-impact-map.appsample.com/
+
+2я карта
+https://mapgenie.io/genshin-impact/maps/teyvat
+
+Китайская карта
+https://yuanshen.site/
+
+Нонейм1 карта
+https://mapofgenshin.com/
+
+Нонейм2 карта
+https://map.genshinpact.com/
+
+Нонейм3 карта, от RU челов
+https://genshin-info.ru/interaktivnaya-karta/
+
+
+Изменения: 17.08.2021
+ - Бинд на карту поддерживает многомониторную конфигурацию ПК, тестить некому так что хз как оно работает, в оконный без рамок идеально работает с ярлыком (-popupwindow) и реестр "Screenmanager Is Fullscreen mode = 0"
+ - На SendInput режиме не работал макрос на стрельбу из лука на эмбер
+ - Скрипт запускает сам себя от имени администратора если режим SendInput или WinApi
+
+Изменения: 16.08.2021
+ - Задержка срабатывания бхопа +15мс по дефолту
+ - Добавлена возможность настроить задержку срабатывания "Бхопа"
+ - Вернул старый оверлей стр 7
+
+Изменения: 15.08.2021
+ - Макросы мешают писать в чат, GUI"FIX Macro + chat" исправлено для "Плавание" и "Macro Key" DllCall"GetCursorInfo" Result1337 <> 0
+ - Вернул джамп кансел на Klee "Numpad +"
+
+Изменения: 14.08.2021
+ - Кнопка приостанавливающая работу скрипта KEY"Page Up" шо это за кнопка? расположена рядом с кнопкой "Home"
+ - Чекбокс "Максимальная скорость", если при работе скрипта игра лагает то снять галку и скрипт перейдет в медленный режим
+
+Изменения: 12.08.2021
+ - Изменено содержимое оверлея, стр 4 оружие и герои
+
 Изменения: 10.08.2021
- + Не работает автопуть с реестра, на релизе путь в одном месте в реестре, через год в другом, автопуть взял тут "UninstallString"
- + Оверлей на ноутах с задушеным масштабированием? разрешением? плотностью пикселей? работает правильно, FIX Overlay Scale
+ - Не работает автопуть с реестра, на релизе путь в одном месте в реестре, через год в другом, автопуть взял тут "UninstallString"
+ - Оверлей на ноутах с задушеным масштабированием? разрешением? плотностью пикселей? работает правильно, GUI"FIX Overlay Scale"
 
 Изменения: 04.08.2021
- + Изменил темп сао опенинга в .mid(главное изменение этого патча) в FL Studio 20
+ - Изменил темп сао опенинга в .mid(главное изменение этого патча) в FL Studio 20
 
 Изменения: 02.08.2021
- + RCS WinApi Bow, Двигать камеру вместе с макросом на нампад 4 и 5
- + Переключение бхопа, бхоп мешает плавать на лодочке и кнопка "нампад 0" переключает бхоп вкл-выкл
- + Исправил переключатель на карте, F1 стал умнее
- + В трее добавил кнопку "Создать ярлык" которая биндит CTRL-ALT-Numpad0 для запуска ярлыка, хз почему но ярлык работает даже с неймченжером
- + Мелкие исправления, шифт блочил работу кнопок, исправлено 2 кнопки
+ - RCS WinApi Bow, Двигать камеру вместе с макросом на нампад 4 и 5
+ - Переключение бхопа, бхоп мешает плавать на лодочке и кнопка KEY"нампад 0" переключает бхоп вкл-выкл
+ - Исправил переключатель на карте, F1 стал умнее
+ - В трее добавил кнопку TRAY"Создать ярлык" которая биндит CTRL-ALT-Numpad0 для запуска ярлыка, хз почему но ярлык работает даже с неймченжером
+ - Мелкие исправления, шифт блочил работу кнопок, исправлено 2 кнопки
 
 Изменения: 31.07.2021
- + Добавлен драг анд дропс(перетаскивание) в GUI для песен лиры ветров
+ - Добавлен драг анд дропс(перетаскивание) в GUI для песен лиры ветров
 
 Изменения: 29.07.2021
- + Фвтоходьбу переделать
- + Изменил логику оверлея, кликабельные кнопки "листать оверлей" в гуи
- + Почистил решейд
- + Сделал дефолт ВинАпи режим ввода
- + Переделал Гуи
- + Не скрывать меню Гуи
+ - Фвтоходьбу переделать
+ - Изменил логику оверлея, кликабельные кнопки GUI"листать оверлей" в гуи
+ - Почистил решейд
+ - Сделал дефолт ВинАпи режим ввода
+ - Переделал Гуи
+ - Не скрывать меню Гуи
 
 Изменения: 05.2021
- + Большая обнова изменено все
- + Решейд
+ - Большая обнова изменено все
+ - Решейд
  
 Изменения: 11.2020
- + Фастлут
- + Скип диалогов
+ - Фастлут
+ - Скип диалогов
 */
 
+;========================================================запускать самого себя от имени администратора
+IniRead, metodVvoda, data\genConfig.ini, Setings, metodVvoda
+if (metodVvoda == 1 or metodVvoda == 3)
+{
+CommandLine := DllCall("GetCommandLine", "Str")
+If !(A_IsAdmin || RegExMatch(CommandLine, " /restart(?!\S)")) {
+    Try {
+        If (A_IsCompiled) {
+            Run *RunAs "%A_ScriptFullPath%" /restart
+        } Else {
+            Run *RunAs "%A_AhkPath%" /restart "%A_ScriptFullPath%"
+        }
+    }
+    ExitApp
+}
+}
+
 ;===============================дерективы
-WinName:= "Genshi AHK Flex v4.2 by Kramar1337"
+WinName:= "Genshi AHK Flex v4.3 by Kramar1337"
 #NoEnv
 SendMode Input
 SetWorkingDir %A_ScriptDir%
-setbatchlines,-1
+#SingleInstance force
+DetectHiddenWindows, On
+DetectHiddenText, On
+CoordMode Mouse, Screen
+
+
+;===============================дерективы из конфига для работы на слабых ПК
+IniRead, Highperformancemode, data\genConfig.ini, Setings, Highperformancemode
+if Highperformancemode
+{
 Process, Priority,, High
+Setbatchlines,-1
 SetKeyDelay,-1, -1
 SetControlDelay, -1
 SetMouseDelay, -1
 SetWinDelay,-1
-#SingleInstance force
-DetectHiddenWindows, On
-DetectHiddenText, On
+}
+; MsgBox %A_BatchLines%`n%A_KeyDelay%`n%A_ControlDelay%`n%A_MouseDelay%`n%A_WinDelay%
+
 
 
 
@@ -114,7 +189,7 @@ FileAppend, %RegExRepFile1%, %A_ScriptFullPath%
 If ScRenamer
 {
 Random, rand1488, 10, 14
-password := gen_password(rand1488)															;вызов функции в переменную (длина)
+password := gen_password(rand1488)										;вызов функции в переменную (длина)
 FileMove, %A_ScriptFullPath%, %A_ScriptDir%\%password%.ahk
 savereloadvar = %A_ScriptDir%\%password%.ahk
 }
@@ -158,6 +233,7 @@ jopa7:=false
 jopa8:=false
 jopa9:=false
 jopa10:=false
+jopa11:=false
 
 ;====================Подгрузка конфига: бинды
 IniRead, key_animcancel, data\genConfig.ini, Binds, key_animcancel
@@ -173,6 +249,7 @@ IniRead, key_vi4er_sens, data\genConfig.ini, Binds, key_vi4er_sens
 ;====================Подгрузка конфига: дополнительные
 IniRead, ShortcutKey, data\genConfig.ini, Extra, ShortcutKey 	;Забиндить ярлык системными кнопками, по дефолту CTRL-ALT-Numpad5
 
+IniRead, FIXchat, data\genConfig.ini, Setings, FIXchat
 
 IniRead, MousemoveBow, data\genConfig.ini, Extra, MousemoveBow 	;двигать мышку вправо когда идет стрельба с макроса на винапи
 IniRead, FishMouseMoveX, data\genConfig.ini, Extra, FishMouseMoveX 	;сколько двигать для фишль по X = 43 на дефолтных настройках
@@ -205,6 +282,8 @@ IniRead, Checkbox1vi4ersens, data\genConfig.ini, Setings, Checkbox1vi4ersens
 IniRead, Checkbox1animcancel, data\genConfig.ini, Setings, Checkbox1animcancel
 IniRead, Checkbox1bhop, data\genConfig.ini, Setings, Checkbox1bhop
 IniRead, Checkbox1bhopDelay, data\genConfig.ini, Setings, Checkbox1bhopDelay
+IniRead, Checkbox1bhopDelayMs, data\genConfig.ini, Setings, Checkbox1bhopDelayMs
+
 
 IniRead, RegeditExport1, data\genConfig.ini, Setings, RegeditExport1
 IniRead, RegeditExport2, data\genConfig.ini, Setings, RegeditExport2
@@ -217,6 +296,7 @@ IniRead, RegeditCheckBox3, data\genConfig.ini, Setings, RegeditCheckBox3
 IniRead, RegeditCheckBox4, data\genConfig.ini, Setings, RegeditCheckBox4
 
 IniRead, GlLanguage, data\genConfig.ini, Setings, GlLanguage
+
 
 
 ;========================если с конфига подтянули ScaleFIX=1 то оверлей будет исправлен для систем с масштабированием например ноуты
@@ -291,7 +371,7 @@ Menu,Tray, add, Сreate shortcut, Metkashortcut1
 Menu,Tray, add
 Menu,Tray, add, Info, MetkaMenu2
 Menu,Tray, add, Exit, MetkaMenu0
-Menu Tray, Icon, data\genicon.ico
+Menu,Tray, Icon, data\genicon.ico, ,1
 ;====================Gui настройки
 ; Gui, 1: -MinimizeBox
 if GlLanguage
@@ -358,9 +438,17 @@ Gui, 1: Add, Edit, x40 y208 w61 h21 vkey_animcancel, %key_animcancel%
 Gui, 1: Add, Text, v1Textanimcancel x104 y208 w56 h23, MacroKey
 Gui, 1: Add, CheckBox, vCheckbox0animcancel x16 y208 w13 h18 Checked%Checkbox1animcancel%
 Gui, 1: Add, Edit, x40 y232 w61 h21 +Disabled, Space
-Gui, 1: Add, Text, x104 y232 w40 h20, Bhop
+Gui, 1: Add, Text, x104 y232 w31 h20, Bhop
 Gui, 1: Add, CheckBox, vCheckbox0bhop x16 y232 w13 h18 Checked%Checkbox1bhop%
-Gui, 1: Add, CheckBox, vCheckbox0bhopDelay x140 y232 w60 h18 Checked%Checkbox1bhopDelay%, > 200ms
+
+
+
+Gui, 1: Add, Edit, vCheckbox1bhopDelayMs x160 y232 w28 h17 Number Limit4, %Checkbox1bhopDelayMs%
+
+
+
+Gui, 1: Add, Text, v1TextaMs x192 y232 w14 h20, ms
+Gui, 1: Add, CheckBox, vCheckbox0bhopDelay x136 y232 w23 h18 Checked%Checkbox1bhopDelay%, >
 Gui, 1: Add, Picture, x208 y16 w252 h256 +BackgroundTrans, data\page1fish.png
 Gui, 1: Tab, 2 	;================настройки
 if GlLanguage
@@ -401,12 +489,11 @@ Gui, 1: Add, CheckBox, vCheckboxshowmegui x16 y224 w120 h23 Checked%showmegui%, 
 Else
 Gui, 1: Add, CheckBox, vCheckboxshowmegui x16 y224 w120 h23 Checked%showmegui%, GUI at startup
 
-
 Gui, 1: Add, CheckBox, vCheckboxGlLanguage x16 y176 w120 h23 Checked%GlLanguage%, RU language GUI
-
 Gui, 1: Add, CheckBox, vCheckboxMousemoveBow x16 y248 w120 h23 Checked%MousemoveBow%, RCS WinApi Bow
-
-Gui, 1: Add, CheckBox, vCheckboxScaleFIX x160 y176 w120 h23 Checked%ScaleFIX%, FIX Overlay Scale
+Gui, 1: Add, CheckBox, vCheckboxScaleFIX x160 y200 w120 h23 Checked%ScaleFIX%, FIX Overlay Scale
+Gui, 1: Add, CheckBox, vCheckboxHighperformancemode x160 y176 w120 h23 Checked%Highperformancemode%, AHK Max Speed
+Gui, 1: Add, CheckBox, vCheckboxFIXchat x160 y224 w120 h23 Checked%FIXchat%, FIX Macro + chat
 
 ;===============================Лира ветров
 
@@ -478,6 +565,7 @@ Gui, 1: Add, Button, gsavegui x264 y288 w43 h23, Save
 Gui, 1: Add, Button, gquitgui x400 y288 w43 h23, Quit
 
 
+
 if (ScWinrenamer = 1)
 {
 Random, rand1488, 33, 35
@@ -488,6 +576,7 @@ Gui, 1: Show
 }
 Else
 {
+
 if metodVvoda = 1
 winsayvar:= "SendInput mode"
 if metodVvoda = 2
@@ -496,10 +585,11 @@ if metodVvoda = 3
 winsayvar:= "WinApi mode"
 Gui, 1: Show, Hide w465 h325, %WinName% (%winsayvar%)
 if showmegui
+
 Gui, 1: Show
+
 }
-; MsgBox Отладка ;=====================================================================выключить отладку
-; Exitapp
+;ломается mousemove из за окна окно1337
 
 ;===============================Переменные
 xSkip:=A_ScreenWidth*.7328
@@ -603,6 +693,7 @@ Else
 Gui, 99: Show, Hide w%HpBarW% h%HpBarH% x%HpBarX% y%HpBarY%, %WinName%
 
 Gui, 99: Cancel
+
 return
 ;=====================================конец мейн потока, дальше идут метки
 
@@ -760,14 +851,40 @@ return
 
 
 
+;===============================Отключить все хоткеи, сменить иконку, остановить активные потоки
+PgUp::
+Suspend, Toggle
+1toggle1Suspend := !1toggle1Suspend
+if (1toggle1Suspend)
+{
+SoundBeep
+Menu,Tray, Icon, data\geniconGr.png, ,1
+ToolTip, OFF, 0, 0
+sleep 300
+ToolTip
+}
+Else
+{
+Menu,Tray, Icon, data\genicon.png, ,1
+ToolTip, ON, 0, 0
+sleep 300
+ToolTip
+}
+Pause , Toggle, 1
+return
+
+
+
 ;===============================Банихоп
 Metkakey_bhop:
+sleep 1
 IfWinActive, %gameexe1337%		;ahk_exe GenshinImpact.exe
 {
 if Checkbox1bhopDelay
-{
-Sleep 230
-}
+	{
+	if (Checkbox1bhopDelayMs > -2 and Checkbox1bhopDelayMs < 5001) 	;вторая проверка если первую обошли от -1 до 5000
+	Sleep %Checkbox1bhopDelayMs%
+	}
 Else
 {
 Sleep 50
@@ -790,8 +907,11 @@ Loop
 return
 
 
+
+
 ;===============================Карта
 Metkakey_map:
+MonitorFound1:=0
 sleep 50
 
 IfWinActive, %gameexe1337%
@@ -800,15 +920,51 @@ IfWinActive, ahk_group GroupNameMap1337
 toggle1 := 1
 
 
+
+
+
+SysGet, MonitorCountVar, MonitorCount 	;получить кол-во мониторов
+if MonitorCountVar > 1 	;если кол-во мониторов больше 1 то
+{
+;Центр монитора
+ScreenWidthMap2mon228:=round(A_ScreenWidth / 2)
+ScreenHeightMap2mon228:=round(A_ScreenHeight / 2)
+;Получаем положение окна и его размеры
+IfWinExist, ahk_group GroupNameMap1337
+{
+WinGetPos, X1map, Y1map, Width1map, Height1map, %MapWin1337%
+X1mapMa:=round(X1map + Width1map / 2)
+Y1mapMa:=round(Y1map + Height1map / 2)
+; Получено 2 точки между 2мя мониторами
+X1mapMaLast:=abs(X1mapMa - ScreenWidthMap2mon228)
+Y1mapMaLast:=abs(Y1mapMa - ScreenHeightMap2mon228)
+if (X1mapMaLast < ScreenWidthMap2mon228) and (Y1mapMaLast < ScreenHeightMap2mon228)
+	{
+	MonitorFound1:=0
+	; Tooltip Карта на основном мониторе
+	}
+Else
+	{
+	MonitorFound1:=1
+	; Tooltip Карта на дополнительном мониторе
+	}
+}
+}
+
+
 toggle1 := !toggle1
 if (toggle1)
 {
-	MapOpen1 := 1
-WinMinimize %gameexe1337% ;свернуть игру
+	if !(MonitorFound1) 	;если карта на основном монике то не сворачивать игру
+	{
+	WinMinimize %gameexe1337% ;свернуть игру
+	}
 IfWinExist, ahk_group GroupNameMap1337 ;если найдено окно с катрой то..
 	{
 WinMaximize ahk_group GroupNameMap1337 ;максимизировать
 WinActivate ahk_group GroupNameMap1337 ;сделать активным
+	if MonitorFound1
+	MouseMove, X1mapMa, Y1mapMa
 	}
 IfWinNotExist, ahk_group GroupNameMap1337 ;если окно карты не найдено то..
 	{
@@ -836,6 +992,10 @@ sleep 900
 }
 else
 {
+if MonitorFound1
+{
+MouseMove, ScreenWidthMap2mon228, ScreenHeightMap2mon228
+}
 WinMaximize %gameexe1337%
 WinActivate %gameexe1337%
 }
@@ -868,7 +1028,17 @@ return
 Metkakey_fastlyt:
 IfWinActive, %gameexe1337%
 {
-Sleep 100
+Sleep 115
+; if FIXchat
+; {
+	; StructSize1337 := A_PtrSize + 16
+	; VarSetCapacity(InfoStruct1337, StructSize1337)
+	; NumPut(StructSize1337, InfoStruct1337)
+	; DllCall("GetCursorInfo", UInt, &InfoStruct1337)
+	; Result1337 := NumGet(InfoStruct1337, 8)
+	; if (Result1337 <> 0) 			;если размер курсора больше 0 то мы в чате и скрипт не нажимает кнопки
+		; Return
+; }
 Loop
 {
     GetKeyState, SpaceVar2, %key_fastlyt%, P
@@ -886,7 +1056,24 @@ Loop
 	Random, RandomVarSc, 15, 20
 	sleep %RandomVarSc%
 	}
+	; sleep 1
+	; Старый фастлут
 	SendInput, {Blind}{WheelDown}
+	
+	; Новый СуперФастЛут, камеру душит	
+	; sleep 1
+	; FastlytToggler1 := !FastlytToggler1
+	; if (FastlytToggler1)
+	; {
+	; SendInput, {Blind}{WheelDown}
+	; }
+	; else
+	; {
+	; SendInput, {Blind}{WheelUp}
+	; }
+	
+	
+	
 }
 }
 return
@@ -915,6 +1102,8 @@ Metkakey_skipNPS:
 IfWinActive, %gameexe1337%
 {
 Sleep 200
+
+
 Loop
 {
     GetKeyState, SpaceVar2, %key_skipNPS%, P
@@ -933,6 +1122,16 @@ return
 
 ;===============================Плавание
 Metkakey_autoswim:
+if FIXchat
+{
+	StructSize1337 := A_PtrSize + 16
+	VarSetCapacity(InfoStruct1337, StructSize1337)
+	NumPut(StructSize1337, InfoStruct1337)
+	DllCall("GetCursorInfo", UInt, &InfoStruct1337)
+	Result1337 := NumGet(InfoStruct1337, 8)
+	if (Result1337 <> 0) 			;если размер курсора больше 0 то мы в чате и скрипт не нажимает кнопки
+		Return
+}
 IfWinActive, %gameexe1337%		;ahk_exe GenshinImpact.exe
 {
 sleep 15
@@ -984,6 +1183,7 @@ jopa7:=false
 jopa8:=false
 jopa9:=false
 jopa10:=false
+jopa11:=false
 if showtooltipVvoba
 ToolTip, Amber legit, 0, 0
 Return
@@ -999,6 +1199,7 @@ jopa7:=false
 jopa8:=false
 jopa9:=false
 jopa10:=false
+jopa11:=false
 if showtooltipVvoba
 ToolTip, Fishl legit, 0, 0
 Return
@@ -1014,6 +1215,7 @@ jopa7:=false
 jopa8:=false
 jopa9:=false
 jopa10:=false
+jopa11:=false
 if showtooltipVvoba
 ToolTip, Xiangling Dragonstrick, 0, 0
 Return
@@ -1029,6 +1231,7 @@ jopa7:=false
 jopa8:=false
 jopa9:=false
 jopa10:=false
+jopa11:=false
 if showtooltipVvoba
 ToolTip, Klee Сombo, 0, 0
 Return
@@ -1044,6 +1247,7 @@ jopa7:=false
 jopa8:=false
 jopa9:=false
 jopa10:=false
+jopa11:=false
 if showtooltipVvoba
 ToolTip, Venti+Ganyu MachineGun, 0, 0
 Return
@@ -1059,6 +1263,7 @@ jopa7:=false
 jopa8:=false
 jopa9:=false
 jopa10:=false
+jopa11:=false
 if showtooltipVvoba
 ToolTip, Amber+Fish MachineGun, 0, 0
 Return
@@ -1074,6 +1279,7 @@ jopa7:=true
 jopa8:=false
 jopa9:=false
 jopa10:=false
+jopa11:=false
 if showtooltipVvoba
 ToolTip, Diluc+Beidou DragonStrike, 0, 0
 Return
@@ -1089,6 +1295,7 @@ jopa7:=false
 jopa8:=true
 jopa9:=false
 jopa10:=false
+jopa11:=false
 if showtooltipVvoba
 ToolTip, Noelle DragonStrike, 0, 0
 Return
@@ -1104,15 +1311,44 @@ jopa7:=false
 jopa8:=false
 jopa9:=true
 jopa10:=false
+jopa11:=false
 if showtooltipVvoba
 ToolTip, Eula DragonStrike, 0, 0
 Return
+;===============================нампад плюс, кли отмена прыжком
+NumpadAdd::
+jopa1:=false
+jopa2:=false
+jopa3:=false
+jopa4:=false
+jopa5:=false
+jopa6:=false
+jopa7:=false
+jopa8:=false
+jopa9:=false
+jopa10:=false
+jopa11:=true
+if showtooltipVvoba
+ToolTip, Klee, 0, 0
+Return
+
+
 
 AntiVACHashChanger:="fghfh3534gjdgdfgfj6867jhmbdsq4123asddfgdfgaszxxcasdf423dfght7657ghnbnghrtwer32esdfgr65475dgdgdf6867ghjkhji7456wsdfsf34sdfsdf324sdfgdfg453453453456345gdgdgdfsf"
 
 
 ;=================================================отмена анимаций на героев
 Metkakey_animcancel:
+if FIXchat
+{
+	StructSize1337 := A_PtrSize + 16
+	VarSetCapacity(InfoStruct1337, StructSize1337)
+	NumPut(StructSize1337, InfoStruct1337)
+	DllCall("GetCursorInfo", UInt, &InfoStruct1337)
+	Result1337 := NumGet(InfoStruct1337, 8)
+	if (Result1337 <> 0) 			;если размер курсора больше 0 то мы в чате и скрипт не нажимает кнопки
+		Return
+}
 if jopa1 							;ембер
 {
 IfWinActive, %gameexe1337%
@@ -1337,12 +1573,12 @@ if jopa4 							;идеальный фишль и эмбер
 IfWinActive, %gameexe1337%
 {
 sleep 1
-if metodVvoda = 2
+if metodVvoda = 1
 {
 sleep 1
 Loop
 {
-	if !GetKeyState("C", "P")
+	if !GetKeyState(key_animcancel, "P")
 	break
 
 		Send {R down}
@@ -1468,6 +1704,19 @@ IfWinActive, %gameexe1337%
 		Click down
 		Sleep 25
 		Click up
+}
+}
+
+if jopa11 							;кли обычные тычки с прыжками
+{
+IfWinActive, %gameexe1337%
+{
+    while(GetKeyState(key_animcancel, "P")) {
+        Click
+        Sleep, 35
+        Send, {Space}
+        Sleep, 550
+    }
 }
 }
 return
@@ -1698,10 +1947,29 @@ GuiControl,1:, key_animcancel, V
 IniWrite, V, data\genConfig.ini, Binds, key_animcancel
 toogglertumbler:=1
 }
+; ======================настройка задржка бхопа
+if (Checkbox1bhopDelayMs > -1 and Checkbox1bhopDelayMs < 1001)
+{
+Gui,1: Font
+GuiControl,1: Font, 1TextaMs
+IniWrite, %Checkbox1bhopDelayMs%, data\genConfig.ini, Setings, Checkbox1bhopDelayMs
+}
+Else
+{
+Gui,1: Font, cff0000
+GuiControl,1: Font, 1TextaMs
+GuiControl,1:, Checkbox1bhopDelayMs, 100
+IniWrite, 100, data\genConfig.ini, Setings, Checkbox1bhopDelayMs
+toogglertumbler:=1
+}
+
 
 IniWrite, %CheckboxRegDir%, data\genConfig.ini, Setings, ONregreadDir
 IniWrite, %CheckboxtooltipVvoba%, data\genConfig.ini, Setings, showtooltipVvoba
 
+
+IniWrite, %CheckboxFIXchat%, data\genConfig.ini, Setings, FIXchat
+IniWrite, %CheckboxHighperformancemode%, data\genConfig.ini, Setings, Highperformancemode
 IniWrite, %CheckboxMousemoveBow%, data\genConfig.ini, Extra, MousemoveBow
 IniWrite, %CheckboxGlLanguage%, data\genConfig.ini, Setings, GlLanguage
 IniWrite, %Checkboxshowmegui%, data\genConfig.ini, Setings, showmegui
@@ -1727,6 +1995,9 @@ IniWrite, %Checkbox0vi4ersens%, data\genConfig.ini, Setings, Checkbox1vi4ersens
 IniWrite, %Checkbox0animcancel%, data\genConfig.ini, Setings, Checkbox1animcancel
 IniWrite, %Checkbox0bhop%, data\genConfig.ini, Setings, Checkbox1bhop
 IniWrite, %Checkbox0bhopDelay%, data\genConfig.ini, Setings, Checkbox1bhopDelay
+
+
+
 
 If toogglertumbler
 Return
@@ -1823,7 +2094,7 @@ PicOverlay1:
 if overlay1toggle
 {
 var0ov -= 1
-if (var0ov > 6)
+if (var0ov > 7)
 var0ov -= 1
 if (var0ov < 1)
 var0ov += 1
@@ -1839,6 +2110,7 @@ GuiControl, 99: +Redraw, MyPictureVar1
 zaglushka:=1
 }
 }
+
 if (var0ov == 2)
 {
 GuiControl, 99: -Redraw, MyPictureVar1
@@ -1847,43 +2119,53 @@ GuiControl, 99: hide, oIE
 GuiControl, 99: +Redraw, MyPictureVar1
 zaglushka:=0
 }
+
 if (var0ov == 3)
 {
 GuiControl, 99: -Redraw, MyPictureVar1
-
 GuiControl, 99: ,MyPictureVar1, data\genOverlay3.png
 GuiControl, 99: hide, oIE
 GuiControl, 99: +Redraw, MyPictureVar1
 zaglushka:=0
 }
+
 if (var0ov == 4)
 {
 GuiControl, 99: -Redraw, MyPictureVar1
-
 GuiControl, 99: ,MyPictureVar1, data\genOverlay4.png
 GuiControl, 99: show, oIE
 GuiControl, 99: +Redraw, MyPictureVar1
 zaglushka:=0
 }
+
 if (var0ov == 5)
 {
 GuiControl, 99: -Redraw, MyPictureVar1
-
 GuiControl, 99: ,MyPictureVar1, data\genOverlay5.png
 GuiControl, 99: -Redraw, oIE
 GuiControl, 99: hide, oIE
 GuiControl, 99: +Redraw, MyPictureVar1
 zaglushka:=0
 }
+
 if (var0ov == 6)
 {
 GuiControl, 99: -Redraw, MyPictureVar1
-
 GuiControl, 99: ,MyPictureVar1, data\genOverlay6.png
 GuiControl, 99: show, oIE
 GuiControl, 99: +Redraw, MyPictureVar1
 zaglushka:=0
 }
+
+if (var0ov == 7)
+{
+GuiControl, 99: -Redraw, MyPictureVar1
+GuiControl, 99: ,MyPictureVar1, data\genOverlay7.png
+GuiControl, 99: hide, oIE
+GuiControl, 99: +Redraw, MyPictureVar1
+zaglushka:=0
+}
+
 }
 Else
 {
@@ -1899,10 +2181,11 @@ PicOverlay2:
 if overlay1toggle
 {
 var0ov += 1
-if (var0ov > 6)
+if (var0ov > 7)
 var0ov -= 1
 if (var0ov < 1)
 var0ov += 1
+
 if (var0ov == 1)
 {
 GuiControl, 99: -Redraw, MyPictureVar1
@@ -1911,55 +2194,65 @@ GuiControl, 99: hide, oIE
 GuiControl, 99: ,MyPictureVar1, data\genOverlay1.png
 GuiControl, 99: +Redraw, MyPictureVar1
 }
+
 if (var0ov == 2)
 {
 GuiControl, 99: -Redraw, MyPictureVar1
-
 GuiControl, 99: ,MyPictureVar1, data\genOverlay2.png
 GuiControl, 99: hide, oIE
 GuiControl, 99: +Redraw, MyPictureVar1
 zaglushka:=0
 }
+
 if (var0ov == 3)
 {
 GuiControl, 99: -Redraw, MyPictureVar1
-
 GuiControl, 99: ,MyPictureVar1, data\genOverlay3.png
 GuiControl, 99: hide, oIE
 GuiControl, 99: +Redraw, MyPictureVar1
 zaglushka:=0
 }
+
 if (var0ov == 4)
 {
 GuiControl, 99: -Redraw, MyPictureVar1
-
 GuiControl, 99: ,MyPictureVar1, data\genOverlay4.png
 GuiControl, 99: show, oIE
 GuiControl, 99: +Redraw, MyPictureVar1
 zaglushka:=0
 }
+
 if (var0ov == 5)
 {
 GuiControl, 99: -Redraw, MyPictureVar1
-
 GuiControl, 99: ,MyPictureVar1, data\genOverlay5.png
 GuiControl, 99: -Redraw, oIE
 GuiControl, 99: hide, oIE
 GuiControl, 99: +Redraw, MyPictureVar1
 zaglushka:=0
 }
+
 if (var0ov == 6)
+{
+GuiControl, 99: -Redraw, MyPictureVar1
+GuiControl, 99: ,MyPictureVar1, data\genOverlay6.png
+GuiControl, 99: show, oIE
+GuiControl, 99: +Redraw, MyPictureVar1
+zaglushka:=0
+}
+
+if (var0ov == 7)
 {
 if (zaglushka == 0)
 {
 GuiControl, 99: -Redraw, MyPictureVar1
-
-GuiControl, 99: ,MyPictureVar1, data\genOverlay6.png
-GuiControl, 99: show, oIE
+GuiControl, 99: ,MyPictureVar1, data\genOverlay7.png
+GuiControl, 99: hide, oIE
 GuiControl, 99: +Redraw, MyPictureVar1
 zaglushka:=1
 }
 }
+
 }
 Else
 {

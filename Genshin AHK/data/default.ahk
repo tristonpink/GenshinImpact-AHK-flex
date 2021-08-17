@@ -19,7 +19,7 @@ key_autoswim=N
 [Extra]
 ShortcutKey=Numpad0
 ;Горячая клавиша для забинжевания ярлыка в системе CTRL-ALT-Numpad5 запускает программу
-MousemoveBow=1
+MousemoveBow=0
 ;Выравнивать спрей при макросной стрельбе с лука на фишль эмбер дионе ганьюй венти ёмии используя винапи режим, 1 - вкл, 0 - выкл
 FishMouseMoveX=43
 FishMouseMoveY=0
@@ -27,7 +27,9 @@ FishMouseMoveY=0
 VentiMouseMoveX=61
 VentiMouseMoveY=0
 [Setings]
-ScaleFIX=0
+FIXchat=0
+Highperformancemode=1
+ScaleFIX=1
 GlLanguage=0
 ScRenamer=0
 ScWinrenamer=0
@@ -53,6 +55,7 @@ Checkbox1vi4ersens=1
 Checkbox1animcancel=1
 Checkbox1bhop=1
 Checkbox1bhopDelay=1
+Checkbox1bhopDelayMs=200
 
 metodVvoda=3
 ;Выбор режима ввода 1 - SendInput, 2 - SendPlay, 3 - WinApi
@@ -72,7 +75,7 @@ GameExe=ahk_class UnityWndClass
 map=1
 ;Выбор интерактивной карты 1 - Mihoyo(Официальная карта михуё), 2 - Genshin-impact-map(Самая первая карта), 3 - Mapgenie.io(Платная карта), 4 - Yuanshen.site(Китайская карта)
 
-ONregreadDir=0
+ONregreadDir=1
 ;Считать путь к игре с реестра автоматически 1 - Да, 0 - Указать путь вручную ниже
 
 DirGame=C:\
