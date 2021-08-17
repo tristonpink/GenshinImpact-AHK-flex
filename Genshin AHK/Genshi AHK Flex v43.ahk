@@ -65,6 +65,12 @@ https://map.genshinpact.com/
 https://genshin-info.ru/interaktivnaya-karta/
 
 
+
+
+
+Изменения: 17.08.2021
+ - Скип диалогов задержка срабатывания +70мс, сумарно 270мс
+
 Изменения: 17.08.2021
  - Бинд на карту поддерживает многомониторную конфигурацию ПК, тестить некому так что хз как оно работает, в оконный без рамок идеально работает с ярлыком (-popupwindow) и реестр "Screenmanager Is Fullscreen mode = 0"
  - На SendInput режиме не работал макрос на стрельбу из лука на эмбер
@@ -120,6 +126,19 @@ https://genshin-info.ru/interaktivnaya-karta/
  - Скип диалогов
 */
 
+
+
+;===============================дерективы
+WinName:= "Genshi AHK Flex v4.3 by Kramar1337"
+#NoEnv
+SendMode Input
+SetWorkingDir %A_ScriptDir%
+#SingleInstance force
+DetectHiddenWindows, On
+DetectHiddenText, On
+CoordMode Mouse, Screen
+
+
 ;========================================================запускать самого себя от имени администратора
 IniRead, metodVvoda, data\genConfig.ini, Setings, metodVvoda
 if (metodVvoda == 1 or metodVvoda == 3)
@@ -136,16 +155,6 @@ If !(A_IsAdmin || RegExMatch(CommandLine, " /restart(?!\S)")) {
     ExitApp
 }
 }
-
-;===============================дерективы
-WinName:= "Genshi AHK Flex v4.3 by Kramar1337"
-#NoEnv
-SendMode Input
-SetWorkingDir %A_ScriptDir%
-#SingleInstance force
-DetectHiddenWindows, On
-DetectHiddenText, On
-CoordMode Mouse, Screen
 
 
 ;===============================дерективы из конфига для работы на слабых ПК
@@ -1101,7 +1110,7 @@ return
 Metkakey_skipNPS:
 IfWinActive, %gameexe1337%
 {
-Sleep 200
+Sleep 270
 
 
 Loop
