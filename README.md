@@ -1,6 +1,6 @@
 # Genshi AHK Flex v4.4
 
-AHK скрипт для Genshin Impact. [EngWiki](https://github.com/Kramar1337/GenshinImpact-AHK-flex/wiki/EN) [RusWiki](https://github.com/Kramar1337/GenshinImpact-AHK-flex/wiki/RU)
+AHK скрипт для Genshin Impact. [Wiki](https://github.com/Kramar1337/GenshinImpact-AHK-flex/wiki)
 
 ![hippo](https://media.giphy.com/media/xArjRR54nHdxJn8EG8/giphy.gif)
 
