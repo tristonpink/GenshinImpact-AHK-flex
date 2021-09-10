@@ -2,6 +2,10 @@
 
 AHK скрипт для Genshin Impact
 
+[Eng](https://github.com/Kramar1337/GenshinImpact-AHK-flex/wiki/EN)
+
+[Ru](https://github.com/Kramar1337/GenshinImpact-AHK-flex/wiki/RU)
+
 ![hippo](https://media.giphy.com/media/xArjRR54nHdxJn8EG8/giphy.gif)
 
 __Что по функционалу:__
