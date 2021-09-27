@@ -3,7 +3,7 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-FileEncoding
+
 def_config_go= 	;подготовить переменную
 (
 [Binds]
@@ -22,11 +22,19 @@ OttenokFis=5
 ;OttenokFis 5 по дефолту
 OptimizationFis=1
 [Extra]
+KeyboardVID=0
+KeyboardPID=0
+MouseVID=0
+MousePID=0
+InterceptionFishMouseMoveX=0
+InterceptionFishMouseMoveY=0
+InterceptionVentiMouseMoveX=0
+InterceptionVentiMouseMoveY=0
 DefaultJopaTrue=0
 ;Активный макрос запускаемый вместе со скриптом. 4 - Эмбер-фишль, 5 - Венти-ганьюй и тд
 ShortcutKey=Numpad0
 ;Горячая клавиша для забинжевания ярлыка в системе CTRL-ALT-Numpad0 запускает программу
-MousemoveBow=1
+MousemoveBow=0
 ;Выравнивать спрей при макросной стрельбе с лука на фишль эмбер дионе ганьюй венти ёмии используя винапи режим, 1 - вкл, 0 - выкл
 FishMouseMoveX=43
 FishMouseMoveY=0
@@ -34,7 +42,8 @@ FishMouseMoveY=0
 VentiMouseMoveX=61
 VentiMouseMoveY=0
 [Setings]
-FIXchat=1
+IsAdmin=1
+FIXchat=0
 Highperformancemode=1
 ScaleFIX=0
 GlLanguage=0
