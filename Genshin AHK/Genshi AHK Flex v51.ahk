@@ -46,6 +46,10 @@ CTRL-ALT-Numpad0 - Запустить ярлык GenshAHK.lnk
 
 
 
+Изменения: 15.10.2021
+ - В оверлей добавлен Горо и Итто(4 стр)
+ - Исправления GUI
+
 Изменения: 06.10.2021
  - Вкладка ресурсы
  - Импортер настроек был в говне, терь фулл работает
@@ -607,7 +611,11 @@ Gui, 1: Add, Edit, vCheckbox1bhopDelayMs x160 y232 w28 h17 Number Limit4, %Check
 
 Gui, 1: Add, Text, v1TextaMs x192 y232 w14 h20, ms
 Gui, 1: Add, CheckBox, vCheckbox0bhopDelay x136 y232 w23 h18 Checked%Checkbox1bhopDelay%, >
-Gui, 1: Add, Picture, x208 y16 w252 h256 +BackgroundTrans, data\page1fish.png
+Random, RandomFishlPic1, 0,6
+if (RandomFishlPic1 > 1)
+Gui, 1: Add, Picture, x208 y16 w252 h256 +BackgroundTrans, data\1page1fish.png
+else
+Gui, 1: Add, Picture, x208 y16 w252 h256 +BackgroundTrans, data\2page1fish.png
 Gui, 1: Tab, 2 	;================настройки=======================================================================настройки==Tab
 if GlLanguage
 Gui, 1: Add, GroupBox, x8 y24 w139 h143, Доп. фишки
@@ -737,19 +745,28 @@ Gui, 1: Add, Text, x16 y72 w120 h23, Step 1. Instal
 Gui, 1: Add, Text, x16 y96 w157 h23, Step 2. Run and start the game
 Gui, 1: Add, Picture, x208 y16 w252 h256 +BackgroundTrans, data\page5pcmr.png
 Gui, 1: Tab, 6 	;==============ссылки=====================================================================ссылки====Tab
+if GlLanguage
 Gui, 1: Add, GroupBox, x8 y24 w147 h244, Разное
-Gui, 1: Add, Link, x16 y48 w120 h23, <a href="https://paimon.moe/timeline/">Лента событий</a>
+Else
+Gui, 1: Add, GroupBox, x8 y24 w147 h244, Other
+Gui, 1: Add, Link, x16 y48 w120 h23, <a href="https://paimon.moe/timeline/">Timeline</a>
 Gui, 1: Add, Link, x16 y72 w120 h23, <a href="https://genshin.aspirine.su/">ASPirine Калькулятор</a>
 Gui, 1: Add, Link, x16 y96 w120 h23, <a href="https://frzyc.github.io/genshin-optimizer/#/">Genshin Optimizer</a>
 Gui, 1: Add, Link, x16 y120 w120 h23, <a href="https://genshin.honeyhunterworld.com/">Honeyhunterworld.com</a>
 Gui, 1: Add, Link, x16 y144 w120 h23, <a href="https://genshin-impact.fandom.com/wiki/Genshin_Impact_Wiki">Genshin Impact Wiki</a>
+if GlLanguage
 Gui, 1: Add, GroupBox, x160 y24 w147 h244, Карты
+Else
+Gui, 1: Add, GroupBox, x160 y24 w147 h244, Maps
 Gui, 1: Add, Link, x168 y48 w120 h23, <a href="https://genshin-impact-map.appsample.com/">Genshin-Impact-Map</a>
 Gui, 1: Add, Link, x168 y72 w120 h23, <a href="https://webstatic-sea.mihoyo.com/app/ys-map-sea/">Mihoyo Map</a>
 Gui, 1: Add, Link, x168 y96 w120 h23, <a href="https://mapgenie.io/genshin-impact/maps/teyvat">MapGenie.io</a>
 Gui, 1: Add, Link, x168 y120 w120 h23, <a href="https://yuanshen.site/">Chinese map</a>
 Gui, 1: Add, Link, x168 y144 w120 h23, <a href="https://genshin-info.ru/interaktivnaya-karta/">Genshin-Info.ru</a>
+if GlLanguage
 Gui, 1: Add, GroupBox, x312 y24 w146 h244, Сливочники
+Else
+Gui, 1: Add, GroupBox, x312 y24 w146 h244, Leaks
 Gui, 1: Add, Link, x320 y48 w120 h23, <a href="https://www.reddit.com/r/Genshin_Impact_Leaks/">Reddit GI Leaks</a>
 Gui, 1: Add, Link, x320 y48 w120 h23, <a href="https://www.reddit.com/r/Genshin_Impact_Leaks/">Reddit GI Leaks</a>
 Gui, 1: Add, Link, x320 y72 w120 h23, <a href="https://twitter.com/Genshin_Intel">Twitter Genshin Intel</a>
