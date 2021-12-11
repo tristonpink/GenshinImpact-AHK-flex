@@ -20,16 +20,18 @@ Numpad 2 - Стрельба на Fischl по легиту но нужно быт
 Numpad 3 - Yoimiya N1RR стоять на месте(38 стрел)
 Numpad 4 - Ganyu Venti Yoimiya Amber Fischl Aloy Tartaglia *Diona *Sara
 Numpad 5 - MachineGun: Ganyu Venti Yoimiya
-Numpad 6 - Klee Сombo
+Numpad 6 - Legit лучники если кикает с сервера, 10.12.21 не кикает
 Numpad 7 - Diluc DragonStrike(Ручной)
 Numpad 8 - Hu Tao 9N2CJ
 Numpad 9 - Hu Tao 9H1CJ
-Numpad + - Klee
+Alt + Numpad 1 - Klee N1CJ
+Alt + Numpad 2 - Klee N2H1
+Alt + Numpad 3 - Klee AutoAttack(Удерживать WASD + Macro Key)
 
 Python
 Tab + ~(тильт или Ё) - Обновить список мелодий
 Tab + 1 2 3 4 5 6 7 8 9 0 - Воспроизвести мелодию на лире ветров
-Tab + Space - Остановить воспроизведение
+Space - Остановить воспроизведение
 
 ReShade
 Home - Открыть ReShade меню
@@ -133,6 +135,30 @@ CTRL-ALT-Numpad0 - Запустить ярлык GenshAHK.lnk
 11:39:15(2355) убийство вишапика 11:43:13 возрождение
 
 
+
+добавить вейвдеши на дилюка юлу нингуин хутао
+
+ 	;Space vk20
+  	;LShift vkA0
+ 	;R vk52
+ 	;LButton vk1
+
+
+
+
+
+
+Изменения: 10.12.2021
+ - Numpad 6 - Legit лучники если кикает с сервера, c 10.12.21 не кикает
+ - Alt + Numpad 1 - Klee N1CJ
+ - Alt + Numpad 2 - Klee N2H1
+ - Alt + Numpad 3 - Klee AutoAttack(Удерживать WASD + Macro Key)
+ - Tooltip Auto fishing по центру
+
+Изменения: 08.12.2021
+ - Бхоп 30 мс вместо 15 мс, спустя год нормально настроил бхоп
+ - Переход на скан коды и виртуальные коды(удаление фантомных шифтов и совместимость с другими скриптами)
+ - Удаление SendPlay режима, он теперь просто не нужен
 
 Изменения: 26.11.2021
  - В оверлей добавлены ШеньХе и Юнджин, небольшие исправления
@@ -313,7 +339,7 @@ CTRL-ALT-Numpad0 - Запустить ярлык GenshAHK.lnk
 
 
 ;===============================дерективы
-WinName:= "Genshi AHK Flex v5.2 by Kramar1337"
+WinName:= "Genshi AHK Flex v5.3 by Kramar1337"
 #NoEnv
 SendMode Input
 SetWorkingDir %A_ScriptDir%
@@ -332,8 +358,7 @@ if IsAdmin
 {
 
 
-if (metodVvoda == 1 or metodVvoda == 2 or metodVvoda == 3 or metodVvoda == 4)
-{
+
 CommandLine := DllCall("GetCommandLine", "Str")
 If !(A_IsAdmin || RegExMatch(CommandLine, " /restart(?!\S)")) {
     Try {
@@ -345,7 +370,7 @@ If !(A_IsAdmin || RegExMatch(CommandLine, " /restart(?!\S)")) {
     }
     ExitApp
 }
-}
+
 
 
 }
@@ -353,7 +378,7 @@ If !(A_IsAdmin || RegExMatch(CommandLine, " /restart(?!\S)")) {
 
 
 ;========================================================подключаем библиотеки для работы драйвера интерсепшн
-if (metodVvoda == 4)
+if (metodVvoda == 3)
 {
 #include %A_ScriptDir%\data\Lib\AutoHotInterception.ahk
 #include %A_ScriptDir%\data\Lib\CLR.ahk
@@ -485,6 +510,15 @@ jopa8:=false
 jopa9:=false
 jopa10:=false
 jopa11:=false
+jopa12:=false
+jopa13:=false
+jopa14:=false
+jopa15:=false
+jopa16:=false
+jopa17:=false
+jopa18:=false
+jopa19:=false
+jopa20:=false
 
 IniRead, DefaultJopaTrue, data\genConfig.ini, Extra, DefaultJopaTrue
 if DefaultJopaTrue = 1
@@ -509,6 +543,25 @@ if DefaultJopaTrue = 10
 jopa10:=true
 if DefaultJopaTrue = 11
 jopa11:=true
+if DefaultJopaTrue = 12
+jopa12:=true
+if DefaultJopaTrue = 13
+jopa13:=true
+if DefaultJopaTrue = 14
+jopa14:=true
+if DefaultJopaTrue = 15
+jopa15:=true
+if DefaultJopaTrue = 16
+jopa16:=true
+if DefaultJopaTrue = 17
+jopa17:=true
+if DefaultJopaTrue = 18
+jopa18:=true
+if DefaultJopaTrue = 19
+jopa19:=true
+if DefaultJopaTrue = 20
+jopa20:=true
+
 
 
 
@@ -826,29 +879,27 @@ Gui, 1: Add, Button, gImportSettButton x352 y72 w97 h23, Import
 Gui, 1: Tab, 3 	;===============безопасность=====================================================================безопасность====Tab
 Gui, 1: Add, Picture, x200 y10 w252 h256 +BackgroundTrans, data\page2noell.png
 if GlLanguage
-Gui, 1: Add, GroupBox, x8 y24 w142 h111, Режим эмитации ввода
+Gui, 1: Add, GroupBox, x8 y24 w142 h97, Режим эмитации ввода
 Else
-Gui, 1: Add, GroupBox, x8 y24 w142 h111, Input mode
+Gui, 1: Add, GroupBox, x8 y24 w142 h97, Input mode
 
 
 If (metodVvoda == 1)
-Gui, 1: Add, ListBox, x16 y40 w82 h56 vListKeyDif AltSubmit, SendInput <=|SendPlay|WinApi|AHI+Play
+Gui, 1: Add, ListBox, x16 y40 w82 h43 vListKeyDif AltSubmit, SendInput <=|WinApi|AHI+Input
 If (metodVvoda == 2)
-Gui, 1: Add, ListBox, x16 y40 w82 h56 vListKeyDif AltSubmit, SendInput|SendPlay <=|WinApi|AHI+Play
+Gui, 1: Add, ListBox, x16 y40 w82 h43 vListKeyDif AltSubmit, SendInput|WinApi <=|AHI+Input
 If (metodVvoda == 3)
-Gui, 1: Add, ListBox, x16 y40 w82 h56 vListKeyDif AltSubmit, SendInput|SendPlay|WinApi <=|AHI+Play
-If (metodVvoda == 4)
-Gui, 1: Add, ListBox, x16 y40 w82 h56 vListKeyDif AltSubmit, SendInput|SendPlay|WinApi|AHI+Play <=
+Gui, 1: Add, ListBox, x16 y40 w82 h43 vListKeyDif AltSubmit, SendInput|WinApi|AHI+Input <=
 
 
-Gui, 1: Add, Button, gpickinput x104 y56 w38 h23, Pick
+Gui, 1: Add, Button, gpickinput x104 y48 w38 h23, Pick
 Gui, 1: Add, CheckBox, vCheckboxScScHachCh x16 y160 w129 h23 Checked%ScHachCh%, Hash changer
 Gui, 1: Add, CheckBox, vCheckboxScWinrenamer x16 y184 w129 h23 Checked%ScWinrenamer%, WindowNameChanger
 Gui, 1: Add, CheckBox, vCheckboxScRandomT x16 y208 w140 h23 Checked%ScRandomT%, Random 40ms (NoMacro)
 Gui, 1: Add, CheckBox, vCheckboxScRenamer x16 y136 w129 h23 Checked%ScRenamer%, Name changer
 Gui, 1: Add, CheckBox, vCheckboxScOverlay x16 y232 w140 h23 Checked%ScOverlay%, UID Hide (Window)
 
-Gui, 1: Add, Button, gPickInterDriver x16 y104 w126 h23, Interception driver (AHI)
+Gui, 1: Add, Button, gPickInterDriver x16 y88 w126 h23, Interception driver (AHI)
 Gui, 1: Tab, 4 	;===============Реестр=====================================================================Реестр====Tab
 Gui, 1: Add, Picture, x208 y16 w252 h256 +BackgroundTrans, data\page4re.png
 if GlLanguage
@@ -938,10 +989,8 @@ Else
 if metodVvoda = 1
 winsayvar:= "Input"
 if metodVvoda = 2
-winsayvar:= "Play"
-if metodVvoda = 3
 winsayvar:= "WinApi"
-if metodVvoda = 4
+if metodVvoda = 3
 winsayvar:= "AHI"
 if A_IsAdmin
 winsayvar2:= "Admin"
@@ -1510,16 +1559,16 @@ Sleep 50
 }
 Loop
 {
-    GetKeyState, SpaceVar1, Space, P
+    GetKeyState, SpaceVar1, vk20, P
     If SpaceVar1 = U
         break
-	multisendinput("Space", "", "Space", "", "0x20", "0", "", "")
+	multisendinput("vk20", "", "vk20", "", "0x20", "0", "", "") 	;Space vk20
 	if ScRandomT
 	{
 	Random, RandomVarSc, 15, 40
 	sleep %RandomVarSc%
 	}
-	Sleep 1
+	Sleep 30
 }
 }
 return
@@ -1679,7 +1728,7 @@ Loop
 	Random, RandomVarSc, 15, 40
 	sleep %RandomVarSc%
 	}
-	multisendinput("F", "", "F", "", "0x46", "0", "", "")
+	multisendinput("sc21", "", "sc21", "", "0x46", "0", "", "") 	;F
 	if ScRandomT
 	{
 	Random, RandomVarSc, 15, 40
@@ -1815,6 +1864,15 @@ jopa8:=false
 jopa9:=false
 jopa10:=false
 jopa11:=false
+jopa12:=false
+jopa13:=false
+jopa14:=false
+jopa15:=false
+jopa16:=false
+jopa17:=false
+jopa18:=false
+jopa19:=false
+jopa20:=false
 if showtooltipVvoba
 ToolTip, Amber legit, 0, 0
 Return
@@ -1831,6 +1889,15 @@ jopa8:=false
 jopa9:=false
 jopa10:=false
 jopa11:=false
+jopa12:=false
+jopa13:=false
+jopa14:=false
+jopa15:=false
+jopa16:=false
+jopa17:=false
+jopa18:=false
+jopa19:=false
+jopa20:=false
 if showtooltipVvoba
 ToolTip, Fishl legit, 0, 0
 Return
@@ -1847,6 +1914,15 @@ jopa8:=false
 jopa9:=false
 jopa10:=false
 jopa11:=false
+jopa12:=false
+jopa13:=false
+jopa14:=false
+jopa15:=false
+jopa16:=false
+jopa17:=false
+jopa18:=false
+jopa19:=false
+jopa20:=false
 if showtooltipVvoba
 ToolTip, Yoimiya N1RR, 0, 0
 Return
@@ -1863,6 +1939,15 @@ jopa8:=false
 jopa9:=false
 jopa10:=false
 jopa11:=false
+jopa12:=false
+jopa13:=false
+jopa14:=false
+jopa15:=false
+jopa16:=false
+jopa17:=false
+jopa18:=false
+jopa19:=false
+jopa20:=false
 if showtooltipVvoba
 ToolTip, Amber+Fish MachineGun, 0, 0
 Return
@@ -1879,10 +1964,19 @@ jopa8:=false
 jopa9:=false
 jopa10:=false
 jopa11:=false
+jopa12:=false
+jopa13:=false
+jopa14:=false
+jopa15:=false
+jopa16:=false
+jopa17:=false
+jopa18:=false
+jopa19:=false
+jopa20:=false
 if showtooltipVvoba
 ToolTip, Venti+Ganyu MachineGun, 0, 0
 Return
-;===============================кли 2 Сombo
+;===============================Legit Bow
 *~$Numpad6::
 jopa1:=false
 jopa2:=false
@@ -1895,8 +1989,17 @@ jopa8:=false
 jopa9:=false
 jopa10:=false
 jopa11:=false
+jopa12:=false
+jopa13:=false
+jopa14:=false
+jopa15:=false
+jopa16:=false
+jopa17:=false
+jopa18:=false
+jopa19:=false
+jopa20:=false
 if showtooltipVvoba
-ToolTip, Klee Сombo, 0, 0
+ToolTip, Legit Bow, 0, 0
 Return
 ;===============================драгонстрайк дилюк бейдоу
 *~$Numpad7::
@@ -1911,6 +2014,15 @@ jopa8:=false
 jopa9:=false
 jopa10:=false
 jopa11:=false
+jopa12:=false
+jopa13:=false
+jopa14:=false
+jopa15:=false
+jopa16:=false
+jopa17:=false
+jopa18:=false
+jopa19:=false
+jopa20:=false
 if showtooltipVvoba
 ToolTip, Diluc+Beidou DragonStrike, 0, 0
 Return
@@ -1927,6 +2039,15 @@ jopa8:=true
 jopa9:=false
 jopa10:=false
 jopa11:=false
+jopa12:=false
+jopa13:=false
+jopa14:=false
+jopa15:=false
+jopa16:=false
+jopa17:=false
+jopa18:=false
+jopa19:=false
+jopa20:=false
 if showtooltipVvoba
 ToolTip, Hu Tao 9N2CJ, 0, 0
 Return
@@ -1943,11 +2064,20 @@ jopa8:=false
 jopa9:=true
 jopa10:=false
 jopa11:=false
+jopa12:=false
+jopa13:=false
+jopa14:=false
+jopa15:=false
+jopa16:=false
+jopa17:=false
+jopa18:=false
+jopa19:=false
+jopa20:=false
 if showtooltipVvoba
 ToolTip, Hu Tao 9H1CJ, 0, 0
 Return
-;===============================нампад плюс, кли отмена прыжком
-*~$NumpadAdd::
+;===============================нампад плюс, кли отмена прыжком Klee N1CJ
+*~$!Numpad1::
 jopa1:=false
 jopa2:=false
 jopa3:=false
@@ -1959,9 +2089,69 @@ jopa8:=false
 jopa9:=false
 jopa10:=false
 jopa11:=true
+jopa12:=false
+jopa13:=false
+jopa14:=false
+jopa15:=false
+jopa16:=false
+jopa17:=false
+jopa18:=false
+jopa19:=false
+jopa20:=false
 if showtooltipVvoba
-ToolTip, Klee, 0, 0
+ToolTip, Klee N1CJ, 0, 0
 Return
+;===============================Пробую кли Klee N2H1
+*~$!Numpad2::
+jopa1:=false
+jopa2:=false
+jopa3:=false
+jopa4:=false
+jopa5:=false
+jopa6:=false
+jopa7:=false
+jopa8:=false
+jopa9:=false
+jopa10:=false
+jopa11:=false
+jopa12:=true
+jopa13:=false
+jopa14:=false
+jopa15:=false
+jopa16:=false
+jopa17:=false
+jopa18:=false
+jopa19:=false
+jopa20:=false
+if showtooltipVvoba
+ToolTip, Klee N2H1, 0, 0
+Return
+;===============================Кли Klee AutoAttack
+*~$!Numpad3::
+jopa1:=false
+jopa2:=false
+jopa3:=false
+jopa4:=false
+jopa5:=false
+jopa6:=false
+jopa7:=false
+jopa8:=false
+jopa9:=false
+jopa10:=false
+jopa11:=false
+jopa12:=false
+jopa13:=true
+jopa14:=false
+jopa15:=false
+jopa16:=false
+jopa17:=false
+jopa18:=false
+jopa19:=false
+jopa20:=false
+if showtooltipVvoba
+ToolTip, Klee AutoAttack, 0, 0
+Return
+
 
 
 
@@ -1980,7 +2170,8 @@ if FIXchat
 	if (Result1337 <> 0) 			;если размер курсора больше 0 то мы в чате и скрипт не нажимает кнопки
 		Return
 }
-if jopa1 							;ембер
+
+if jopa1 							;_____________________________________ембер
 {
 IfWinActive, %gameexe1337%
 {
@@ -2009,7 +2200,9 @@ sleep 170
 }
 }
 }
-if jopa2 							;фишль
+
+
+if jopa2 							;_____________________________________фишль
 {
 IfWinActive, %gameexe1337%
 {
@@ -2019,93 +2212,36 @@ Loop
     GetKeyState, 2SpaceVar2, %key_animcancel%, P
     If 2SpaceVar2 = U
         break
-multisendinput("LButton", "", "LButton", "", "", "", "0x0002", "0x0004")
-; Sendplay, {Blind}{LButton}
+multisendinput("vk1", "", "vk1", "", "", "", "0x0002", "0x0004") 	;LButton
 Random, RandomVarFish, 320, 321
 sleep %RandomVarFish%
-multisendinput("LButton", "", "LButton", "", "", "", "0x0002", "0x0004")
-; Sendplay, {Blind}{LButton}
+multisendinput("vk1", "", "vk1", "", "", "", "0x0002", "0x0004") 	;LButton
 Random, RandomVarFish, 310, 311
 sleep %RandomVarFish%
-multisendinput("LButton", "", "LButton", "", "", "", "0x0002", "0x0004")
-; Sendplay, {Blind}{LButton}
+multisendinput("vk1", "", "vk1", "", "", "", "0x0002", "0x0004") 	;LButton
     GetKeyState, 2SpaceVar2, %key_animcancel%, P
     If 2SpaceVar2 = U
         break
 Random, RandomVarFish, 415, 416
 sleep %RandomVarFish%
-multisendinput("R", "", "R", "", "0x52", "0", "", "")
-; Sendplay, {Blind}{R}
+multisendinput("vk52", "", "vk52", "", "0x52", "0", "", "") 	;R
 Random, RandomVarFish, 50, 51
 sleep %RandomVarFish%
-multisendinput("R", "", "R", "", "0x52", "0", "", "")
-; Sendplay, {Blind}{R}
+multisendinput("vk52", "", "vk52", "", "0x52", "0", "", "") 	;R
 Random, RandomVarFish, 170, 171
 sleep %RandomVarFish%
 }
 }
 }
 
-if jopa6 							;кли комбо
-{
-IfWinActive, %gameexe1337%
-{
-Ivar:=0
-sleep 1
-Loop
-{
-    GetKeyState, 2SpaceVar2, %key_animcancel%, P
-    If 2SpaceVar2 = U
-        break
-multisendinput2("LButton", "", "LButton", "", "", "", "0x0002", "0x0004")
-; SendInput, {Blind}{LButton}
-sleep 415
-multisendinput2("LButton", "", "LButton", "", "", "", "0x0002", "0x0004")
-; SendInput, {Blind}{LButton}
-sleep 1
-multisendinput2("Space", "", "Space", "", "0x20", "0", "", "")
-; SendInput, {Blind}{Space}
-sleep 520
-    GetKeyState, 2SpaceVar2, %key_animcancel%, P
-    If 2SpaceVar2 = U
-        break
-multisendinput2("LButton", "", "LButton", "", "", "", "0x0002", "0x0004")
-; SendInput, {Blind}{LButton}
-sleep 55
-if Ivar = 6
-{
-multisendinput2("vk45", "", "vk45", "", "0x45", "0", "", "")
-; SendInput, {Blind}{vk45}
-sleep 225
-Ivar:=0
-}
-Else
-{
-multisendinput2("LButton", " Down", "LButton", " Down", "", "", "0x0002", "")
-; SendInput, {Blind}{LButton Down}
-sleep 210
-multisendinput2("LButton", " Up", "LButton", " Up", "", "", "0x0002", "0x0004")
-; SendInput, {Blind}{LButton Up}
-}
-sleep 600
-    GetKeyState, 2SpaceVar2, %key_animcancel%, P
-    If 2SpaceVar2 = U
-        break
-multisendinput2("Space", "", "Space", "", "0x20", "0", "", "")
-; SendInput, {Blind}{Space}
-sleep 510
-Ivar++
-; tooltip %Ivar%
-}
-}
-}
 
-if jopa3 							;ёмия тычки обычной атаки с отменой анимации
+
+if jopa3 							;_____________________________________ёмия тычки обычной атаки с отменой анимации
 {
 IfWinActive, %gameexe1337%
 {
 
-if metodVvoda = 3 
+if metodVvoda = 2
 {
 	sleep 1
 	Loop
@@ -2114,7 +2250,7 @@ if metodVvoda = 3
 		If 2SpaceVar2 = U
 			break
 
-	multisendinput("LButton", "", "LButton", "", "", "", "0x0002", "0x0004")
+	multisendinput("vk1", "", "vk1", "", "", "", "0x0002", "0x0004") 	;LButton vk1
 	Sleep 400 	;400 норм но нада меньше
 
 		GetKeyState, 2SpaceVar2, %key_animcancel%, P
@@ -2141,20 +2277,20 @@ Else
 		If 2SpaceVar2 = U
 			break
 
-	multisendinput("LButton", "", "LButton", "", "", "", "0x0002", "0x0004")
+	multisendinput("vk1", "", "vk1", "", "", "", "0x0002", "0x0004") 	;LButton vk1
 	Sleep 400 	;400 норм но нада меньше
 
 		GetKeyState, 2SpaceVar2, %key_animcancel%, P
 		If 2SpaceVar2 = U
 			break
 
-	multisendinput("R", " down", "R", " down", "0x52", "1", "", "")
+	multisendinput("vk52", " down", "vk52", " down", "0x52", "1", "", "") 	;R vk52
 	Sleep 1
-	multisendinput("R", " up", "R", " up", "0x52", "0", "", "")
+	multisendinput("vk52", " up", "vk52", " up", "0x52", "0", "", "") 	;R vk52
 	Sleep 25 	;30 норм, если на 25 отвал
-	multisendinput("R", " down", "R", " down", "0x52", "1", "", "")
+	multisendinput("vk52", " down", "vk52", " down", "0x52", "1", "", "") 	;R vk52
 	Sleep 1
-	multisendinput("R", " up", "R", " up", "0x52", "0", "", "")
+	multisendinput("vk52", " up", "vk52", " up", "0x52", "0", "", "") 	;R vk52
 	Sleep 1
 	}
 }
@@ -2162,120 +2298,9 @@ Else
 }
 }
 
-if jopa5 							;идеальный вентиль
-{
-IfWinActive, %gameexe1337%
-{
-sleep 1
-if metodVvoda = 1 
-{
-sleep 1
-Loop
-{
-    GetKeyState, 2SpaceVar2, %key_animcancel%, P 	;проверить состояние клавиши
-    If 2SpaceVar2 = U
-        break
-	Send {R down}
-	Sleep 20
-	Send {R up}
-	Sleep 35
-	
-		Click down
-		Sleep 1
-		Click up
-	
-	Send {R down}
-	Sleep 20
-	Send {R up}
-	Sleep 35
-}
-}
-if metodVvoda = 3
-{
-sleep 1
-Loop
-{
-	GetKeyState, 2SpaceVar2, %key_animcancel%, P 	;идеальный вентиль 3
-    If 2SpaceVar2 = U
-        break
-		
-		if MousemoveBow
-		DllCall("mouse_event", uint, 1, int, VentiMouseMoveX, int, VentiMouseMoveY, uint, 0, int, 0) 	;двигаю мышку чтобы выровнять спрей
-		
-		DllCall("keybd_event", int, 0x52, int, 0xA0, int, 0, int, 0)
-		sleep 20
-		DllCall("keybd_event", int, 0x52, int, 0xA0, int, 2, int, 0)
-		sleep 35
-
-	
-		Click down
-		Sleep 1
-		Click up
-	
-		DllCall("keybd_event", int, 0x52, int, 0xA0, int, 0, int, 0)
-		sleep 20
-		DllCall("keybd_event", int, 0x52, int, 0xA0, int, 2, int, 0)
-		sleep 35
-}
-}
-
-if metodVvoda = 2
-{
-sleep 1
-Loop
-{
-	GetKeyState, 2SpaceVar2, %key_animcancel%, P 	;идеальный вентиль 2
-    If 2SpaceVar2 = U
-		break
-multisendinput("R", "", "R", "", "0x52", "0", "", "")
-	Sleep 37 	;Sleep 70
-	Click
-	Sleep 1 	;Sleep 1
-multisendinput("R", "", "R", "", "0x52", "0", "", "")
-	Sleep 37 	;Sleep 50
-}
-}
 
 
-
-if metodVvoda = 4
-{
-sleep 1
-Loop
-{
-	GetKeyState, 2SpaceVar2, %key_animcancel%, P 	;идеальный вентиль 4, драйвер+сендплей
-    If 2SpaceVar2 = U
-		break
-	
-	if MousemoveBow
-	AHI.SendMouseMoveRelative(mouseid, InterceptionVentiMouseMoveX, InterceptionVentiMouseMoveY) 	;движение
-
-
-		AHI.SendKeyEvent(keyboardId, 0x13, 1) 	;0x13 код нажатия "R" Make (HEX)
-		sleep 20
-		AHI.SendKeyEvent(keyboardId, 0x93, 0) 	;0x93 код отпускания "R" Break (HEX)
-		sleep 35
-
-		AHI.SendMouseButtonEvent(mouseId, 0, 1) 	;нажатие
-		Sleep 1
-		AHI.SendMouseButtonEvent(mouseId, 0, 0) 	;нажатие
-	
-		AHI.SendKeyEvent(keyboardId, 0x13, 1) 	;0x13 код нажатия "R" Make (HEX)
-		sleep 20
-		AHI.SendKeyEvent(keyboardId, 0x93, 0) 	;0x93 код отпускания "R" Break (HEX)
-		sleep 35
-
-
-
-}
-}
-
-
-
-}
-}
-
-if jopa4 							;идеальный фишль и эмбер
+if jopa4 							;_____________________________________идеальный фишль и эмбер
 {
 IfWinActive, %gameexe1337%
 {
@@ -2288,9 +2313,9 @@ Loop
 	if !GetKeyState(key_animcancel, "P")
 	break
 
-		Send {R down}
+		Send {vk52 down} 	;R vk52
 		sleep 1
-		Send {R up}
+		Send {vk52 up} 	;R vk52
 		sleep 1
 		
 		Sleep 38 	;Sleep 70
@@ -2298,13 +2323,13 @@ Loop
 		Sleep 1 	;Sleep 1
 		Click up
 		
-		Send {R down}
+		Send {vk52 down} 	;R vk52
 		sleep 1
-		Send {R up}
+		Send {vk52 up} 	;R vk52
 		sleep 23 	;Sleep 23
 }
 }
-if metodVvoda = 3
+if metodVvoda = 2 	;===========================================================протестил винапи режим на ембер все ок, не какает
 {
 Loop
 {
@@ -2327,37 +2352,17 @@ Loop
 		sleep 1
 		DllCall("keybd_event", int, 0x52, int, 0xA0, int, 2, int, 0)
 		sleep 23 	;Sleep 23
-		
-}
-}
-
-if metodVvoda = 2
-{
-Loop
-{
-	GetKeyState, 2SpaceVar2, %key_animcancel%, P 	;идеальный фишль+эмбер
-    If 2SpaceVar2 = U
-		break
-multisendinput("R", "", "R", "", "0x52", "0", "", "")
-	Sleep 60 	;Sleep 70
-	Click
-	Sleep 1 	;Sleep 1
-multisendinput("R", "", "R", "", "0x52", "0", "", "")
-	Sleep 70 	;Sleep 50
 }
 }
 
 
 
-
-
-
-if metodVvoda = 4
+if metodVvoda = 3
 {
 sleep 1
 Loop
 {
-	GetKeyState, 2SpaceVar2, %key_animcancel%, P 	;идеальный фишль+эмбер 4, драйвер+сендплей
+	GetKeyState, 2SpaceVar2, %key_animcancel%, P 	;идеальный фишль+эмбер 3, драйвер+сендплей
     If 2SpaceVar2 = U
 		break
 	
@@ -2379,32 +2384,208 @@ Loop
 		AHI.SendKeyEvent(keyboardId, 0x93, 0) 	;0x93 код отпускания "R" Break (HEX)
 		sleep 23 	;sleep 23
 
+}
+}
+
+
+}
+}
+
+if jopa5 							;_____________________________________идеальный вентиль
+{
+IfWinActive, %gameexe1337%
+{
+sleep 1
+if metodVvoda = 1 
+{
+sleep 1
+Loop
+{
+    GetKeyState, 2SpaceVar2, %key_animcancel%, P 	;проверить состояние клавиши
+    If 2SpaceVar2 = U
+        break
+	Send {vk52 down} 	;R vk52
+	Sleep 20
+	Send {vk52 up} 	;R vk52
+	Sleep 35
+	
+		Click down
+		Sleep 1
+		Click up
+	
+	Send {vk52 down} 	;R vk52
+	Sleep 20
+	Send {vk52 up} 	;R vk52
+	Sleep 35
+}
+}
+if metodVvoda = 2 	;=======================================тест винапи емия
+{
+sleep 1
+Loop
+{
+	GetKeyState, 2SpaceVar2, %key_animcancel%, P 	;идеальный вентиль 2
+    If 2SpaceVar2 = U
+        break
+		
+		
+		
+		if MousemoveBow
+		DllCall("mouse_event", uint, 1, int, VentiMouseMoveX, int, VentiMouseMoveY, uint, 0, int, 0) 	;двигаю мышку чтобы выровнять спрей
+		
+		DllCall("keybd_event", int, 0x52, int, 0xA0, int, 0, int, 0)
+		sleep 20
+		DllCall("keybd_event", int, 0x52, int, 0xA0, int, 2, int, 0)
+		sleep 35
+
+	
+		Click down
+		Sleep 1
+		Click up
+	
+		DllCall("keybd_event", int, 0x52, int, 0xA0, int, 0, int, 0)
+		sleep 20
+		DllCall("keybd_event", int, 0x52, int, 0xA0, int, 2, int, 0)
+		sleep 35
+}
+}
+
+
+if metodVvoda = 3
+{
+sleep 1
+Loop
+{
+	GetKeyState, 2SpaceVar2, %key_animcancel%, P 	;идеальный вентиль 3, драйвер+сендплей
+    If 2SpaceVar2 = U
+		break
+	
+	if MousemoveBow
+	AHI.SendMouseMoveRelative(mouseid, InterceptionVentiMouseMoveX, InterceptionVentiMouseMoveY) 	;движение
+
+		AHI.SendKeyEvent(keyboardId, 0x13, 1) 	;0x13 код нажатия "R" Make (HEX)
+		sleep 20
+		AHI.SendKeyEvent(keyboardId, 0x93, 0) 	;0x93 код отпускания "R" Break (HEX)
+		sleep 35
+
+		AHI.SendMouseButtonEvent(mouseId, 0, 1) 	;нажатие
+		Sleep 1
+		AHI.SendMouseButtonEvent(mouseId, 0, 0) 	;нажатие
+	
+		AHI.SendKeyEvent(keyboardId, 0x13, 1) 	;0x13 код нажатия "R" Make (HEX)
+		sleep 20
+		AHI.SendKeyEvent(keyboardId, 0x93, 0) 	;0x93 код отпускания "R" Break (HEX)
+		sleep 35
+}
+}
+
+
+
+}
+}
+
+if jopa6 							;_____________________________________идеальный фишль и эмбер легит
+{
+IfWinActive, %gameexe1337%
+{
+sleep 1
+if metodVvoda = 1
+{
+sleep 1
+Loop
+{
+	if !GetKeyState(key_animcancel, "P")
+	break
+
+		Send {vk52 down} 	;R vk52
+		sleep 20
+		Send {vk52 up} 	;R vk52
+		sleep 40
+		
+		Sleep 40 	;Sleep 70
+		Click down
+		Sleep 40 	;Sleep 1
+		Click up
+		
+		Send {vk52 down} 	;R vk52
+		sleep 40
+		Send {vk52 up} 	;R vk52
+		sleep 40 	;Sleep 23
+}
+}
+if metodVvoda = 2 	;===========================================================протестил винапи режим на ембер все ок, не какает
+{
+Loop
+{
+	if !GetKeyState(key_animcancel, "P") 	;идеальный фишль+эмбер
+	break
+		if MousemoveBow
+		DllCall("mouse_event", uint, 1, int, FishMouseMoveX, int, FishMouseMoveY, uint, 0, int, 0) 	;двигаю мышку чтобы выровнять спрей
+		
+		DllCall("keybd_event", int, 0x52, int, 0xA0, int, 0, int, 0)
+		sleep 20
+		DllCall("keybd_event", int, 0x52, int, 0xA0, int, 2, int, 0)
+		sleep 40
+		Sleep 40
+		Click down
+		Sleep 40
+		Click up
+		DllCall("keybd_event", int, 0x52, int, 0xA0, int, 0, int, 0)
+		sleep 40
+		DllCall("keybd_event", int, 0x52, int, 0xA0, int, 2, int, 0)
+		sleep 40
+}
+}
+
+
+
+if metodVvoda = 3
+{
+sleep 1
+Loop
+{
+	GetKeyState, 2SpaceVar2, %key_animcancel%, P 	;идеальный фишль+эмбер 3, драйвер+сендплей
+    If 2SpaceVar2 = U
+		break
+	
+	if MousemoveBow
+	AHI.SendMouseMoveRelative(mouseid, InterceptionFishMouseMoveX, InterceptionFishMouseMoveY) 	;движение
+
+
+		AHI.SendKeyEvent(keyboardId, 0x13, 1) 	;0x13 код нажатия "R" Make (HEX)
+		sleep 40
+		AHI.SendKeyEvent(keyboardId, 0x93, 0) 	;0x93 код отпускания "R" Break (HEX)
+		sleep 53 	;sleep 53
+
+		AHI.SendMouseButtonEvent(mouseId, 0, 1) 	;нажатие
+		Sleep 40
+		AHI.SendMouseButtonEvent(mouseId, 0, 0) 	;нажатие
+
+		AHI.SendKeyEvent(keyboardId, 0x13, 1) 	;0x13 код нажатия "R" Make (HEX)
+		sleep 40
+		AHI.SendKeyEvent(keyboardId, 0x93, 0) 	;0x93 код отпускания "R" Break (HEX)
+		sleep 40 	;sleep 23
+
+}
+}
 
 
 }
 }
 
 
-
-
-
-
-
-}
-}
-
-if jopa7 							;дилюк бейдоу драгонстрайк
+if jopa7 							;_____________________________________дилюк бейдоу драгонстрайк
 {
 IfWinActive, %gameexe1337%
 {
 		Click down
 		Click up
 		Sleep 360			;360 норм дилюк
-		SendInput {LShift down}
+		SendInput {vkA0 down}  	;LShift vkA0
 		Sleep 1
-		SendInput {LShift up}
-		SendInput {Space down}
-		SendInput {Space up}
+		SendInput {vkA0 up}  	;LShift vkA0
+		SendInput {vk20 down} 	;Space vk20
+		SendInput {vk20 up} 	;Space vk20
 		; Sleep 25
 		; Click				;авто
 
@@ -2429,7 +2610,7 @@ IfWinActive, %gameexe1337%
 }
 }
 
-if jopa8 							;Hu Tao 9N2CJ(2 нормал, отмена прыжком, 9-10тычек, хитлаг удлиняет е-шку до9сек после10сек)
+if jopa8 							;____________Hu Tao 9N2CJ(2 нормал, отмена прыжком, 9-10тычек, хитлаг удлиняет е-шку до9сек после10сек)
 {
 IfWinActive, %gameexe1337%
 {
@@ -2439,16 +2620,16 @@ IfWinActive, %gameexe1337%
 		If 8SpaceState = U
 			break
 		
-		SendInput {LButton}
+		SendInput {vk1} 	;LButton vk1
 		Sleep 190 	;190
-		SendInput {LButton}
+		SendInput {vk1} 	;LButton vk1
 
 	    GetKeyState, 8SpaceState, %key_animcancel%, P
 		If 8SpaceState = U
 			break
 
 		Sleep 300 	;300
-		SendInput {Space}
+		SendInput {vk20} 	;LButton vk20
 		
 	    GetKeyState, 8SpaceState, %key_animcancel%, P
 		If 8SpaceState = U
@@ -2459,7 +2640,7 @@ IfWinActive, %gameexe1337%
 }
 }
 
-if jopa9 							;Hu Tao 9H1CJ(9 ударов, удержание, джамп кансел)
+if jopa9 							;_________________________Hu Tao 9H1CJ(9 ударов, удержание, джамп кансел)
 {
 IfWinActive, %gameexe1337%
 {
@@ -2469,28 +2650,64 @@ IfWinActive, %gameexe1337%
 		If 9SpaceState = U
 			break
 		
-		SendInput {LButton down}
+		SendInput {vk1 down} 	;LButton vk1
 		Sleep 420 	;400
-		SendInput {LButton up}
+		SendInput {vk1 up} 	;LButton vk1
 		Sleep 15
-		SendInput {Space}
+		SendInput {vk20} 	;Space vk20
 		sleep 580 	;570
 	}
 }
 }
 
-if jopa11 							;кли обычные тычки с прыжками
+if jopa11 							;_________________________кли джамп кансел
 {
 IfWinActive, %gameexe1337%
 {
     while(GetKeyState(key_animcancel, "P")) {
         Click
-        Sleep, 35
-        Send, {Space}
-        Sleep, 550
+        Sleep, 35 	;35
+        sendInput, {vk20} 	;Space vk20
+        Sleep, 100 	;550
     }
 }
 }
+
+if jopa12 							;_________________________кли Нормал нормал холда
+{
+IfWinActive, %gameexe1337%
+{
+    while(GetKeyState(key_animcancel, "P")) {
+	click
+	sleep 400
+			if !GetKeyState(key_animcancel, "P")
+				Break
+	click 
+	sleep 300
+	SendInput,  {vk1 down}	;LButton vk1
+	sleep 250
+			if !GetKeyState(key_animcancel, "P")
+				Break
+	SendInput,  {vk1 up} 	;LButton vk1
+	sleep 800
+	}
+}
+}
+
+if jopa13 							;_________________________кли Klee AutoAttack
+{
+IfWinActive, %gameexe1337%
+{
+    Loop
+	{
+	if !GetKeyState(key_animcancel, "P")
+		Break
+	SendInput, {vk1}	;LButton vk1
+	sleep 560 	;550 нормас
+	}
+}
+}
+
 return
 
 
@@ -2838,8 +3055,6 @@ if ListKeyDif = 2
 IniWrite, 2, data\genConfig.ini, Setings, metodVvoda
 if ListKeyDif = 3
 IniWrite, 3, data\genConfig.ini, Setings, metodVvoda
-if ListKeyDif = 4
-IniWrite, 4, data\genConfig.ini, Setings, metodVvoda
 Return
 
 
@@ -3061,7 +3276,6 @@ Return
 
 
 
-
 #UseHook, On
 metka-2-kli1:
   SetTimer, metka-2-kli2-start, off
@@ -3071,7 +3285,7 @@ metka-2-kli1:
 Return
 metka-2-kli2:
   SetTimer, metka-2-kli2-start, on
-  Tooltip Auto fishing: ON,0,0,2
+  Tooltip Auto fishing: ON,round(A_ScreenWidth * .5 - 50),0,2
 Return
 
 
@@ -3110,7 +3324,7 @@ sleep %OptimizationFis%
 ImageSearch, FoundXFis, FoundYFis, X1Fis, Y1Fis, X2Fis, Y2Fis, *%OttenokFis%, *%Prozra4nostiFis% data\find.png
 if ErrorLevel = 0
 	{
-		SendInput {LButton Up}
+		SendInput {vk1 Up} 	;LButton vk1
 		ImageSearch, FoundX2Fis, FoundY2Fis, X1Fis, Y1Fis, X2Fis, Y2Fis, *%OttenokFis%, *%Prozra4nostiFis% data\find2.png
 		if ErrorLevel = 0
 			{
@@ -3120,11 +3334,11 @@ if ErrorLevel = 0
 				FoundX2Fis-=10
 				if (FoundX2Fis < FoundXFis)
 				{
-				SendInput {LButton Down}
+				SendInput {vk1 Down} 	;LButton vk1
 				}
 				if (FoundX2Fis > FoundXFis)
 				{
-				SendInput {LButton Up}
+				SendInput {vk1 Up} 	;LButton vk1
 				}
 			}
 	}
@@ -3137,14 +3351,8 @@ multisendinput(SendInputKey, SendInputKeyStatus, SendPlayKey, SendPlayKeyStatus,
 if metodVvoda = 1
 	{
 	SendInput, {%SendInputKey%%SendInputKeyStatus%}
-	; tooltip SendInputKey1 = %metodVvoda%
 	}
 if metodVvoda = 2
-	{
-	Sendplay, {Blind}{%SendPlayKey%%SendPlayKeyStatus%}
-	; tooltip SendPlayKey2 = %metodVvoda%
-	}
-if metodVvoda = 3
 	{
 	if WinApiMouseKeyStatus !=											;если не пусто то нажать клик и отпустить если WinApiMouseKeyStatus = 0x0004 отжать ЛКМ
 		{
@@ -3166,11 +3374,10 @@ if metodVvoda = 3
 		{
 		DllCall("keybd_event", int, WinApiKey, int, 0xA0, int, 0, int, 0)
 		}
-	; tooltip WinApiKey3 = %metodVvoda%
 	}
-if metodVvoda = 4 	;метод ввода драйвер интерсепшен + СендПлей
+if metodVvoda = 3 	;метод ввода драйвер интерсепшен + СендПлей
 	{
-	Sendplay, {Blind}{%SendPlayKey%%SendPlayKeyStatus%}
+	SendInput, {%SendInputKey%%SendInputKeyStatus%}
 	}
 }
 ;=========================================================SendInput={Blind}============функция эмитации разных режимов ввода: SendInput, SendPlay, WinApi
@@ -3179,14 +3386,8 @@ if metodVvoda = 1
 	{
 	SendInput, {%SendInputKey%%SendInputKeyStatus%}
 	sleep 1
-	; tooltip SendInputKey1 = %metodVvoda%
 	}
 if metodVvoda = 2
-	{
-	Sendplay, {Blind}{%SendPlayKey%%SendPlayKeyStatus%}
-	; tooltip SendPlayKey2 = %metodVvoda%
-	}
-if metodVvoda = 3
 	{
 	if WinApiMouseKeyStatus !=											;если не пусто то нажать клик и отпустить если WinApiMouseKeyStatus = 0x0004 отжать ЛКМ
 		{
@@ -3208,11 +3409,10 @@ if metodVvoda = 3
 		{
 		DllCall("keybd_event", int, WinApiKey, int, 0xA0, int, 0, int, 0)
 		}
-	; tooltip WinApiKey3 = %metodVvoda%
 	}
-if metodVvoda = 4 	;метод ввода драйвер интерсепшен + СендПлей
+if metodVvoda = 3 	;метод ввода драйвер интерсепшен + СендПлей
 	{
-	Sendplay, {Blind}{%SendPlayKey%%SendPlayKeyStatus%}
+	SendInput, {%SendInputKey%%SendInputKeyStatus%}
 	}
 }
 
@@ -3627,8 +3827,8 @@ F2 - *Оверлей
 F3 - *Автоходьба
 F - Фастлут
 Z - Скип диалогов
-X - Авто рыбалка (дабл клик вкл, сингл клик выкл)
-N - Таймер
+X - Авторыбалка (дабл клик вкл, сингл клик выкл)
+N - Таймер (дабл клик вкл, сингл клик выкл) (-popupwindow)
 Space - Банихоп
 Left - Пролистать оверлей
 Right - Пролистать оверлей
@@ -3641,16 +3841,18 @@ Numpad 2 - Стрельба на Fischl по легиту но нужно быт
 Numpad 3 - Yoimiya N1RR стоять на месте(38 стрел)
 Numpad 4 - Ganyu Venti Yoimiya Amber Fischl Aloy Tartaglia *Diona *Sara
 Numpad 5 - MachineGun: Ganyu Venti Yoimiya
-Numpad 6 - Klee Сombo
+Numpad 6 - Legit лучники если кикает с сервера
 Numpad 7 - Diluc DragonStrike(Ручной)
 Numpad 8 - Hu Tao 9N2CJ
 Numpad 9 - Hu Tao 9H1CJ
-Numpad + - Klee
+Alt + Numpad 1 - Klee N1CJ
+Alt + Numpad 2 - Klee N2H1
+Alt + Numpad 3 - Klee AutoAttack(Удерживать WASD + Macro Key)
 
 Python
 Tab + ~(тильт или Ё) - Обновить список мелодий
 Tab + 1 2 3 4 5 6 7 8 9 0 - Воспроизвести мелодию на лире ветров
-Tab + Space - Остановить воспроизведение
+Space - Остановить воспроизведение
 
 ReShade
 Home - Открыть ReShade меню
@@ -3680,21 +3882,23 @@ End - End the script
 Page Up - * Suspend-Resume the script
 V - Macro Key
 Numpad 0 - Enable / Disable Banihop
-Numpad 1 - Shoot Amber on Legit but need to be in motion + W
+Numpad 1 - Shooting Amber on Legit, but you need to be on the move + W
 Numpad 2 - Shooting Fischl on Legit but you need to be in motion + W
-Numpad 3 - Yoimiya N1RR стоять на месте(38 стрел)
-Numpad 4 - Ganyu Venti Yoimiya Amber Fischl Aloy Tartaglia *Diona *Sara
+Numpad 3 - Yoimiya N1RR Stand Still (38 Arrows)
+Numpad 4 - Ganyu Venti Yoimiya Amber Fischl Aloy Tartaglia * Diona * Sara
 Numpad 5 - MachineGun: Ganyu Venti Yoimiya
-Numpad 6 - Klee Сombo
-Numpad 7 - Diluc DragonStrike(Ручной)
+Numpad 6 - Legit archers if kicks from the server
+Numpad 7 - Diluc DragonStrike (Manual)
 Numpad 8 - Hu Tao 9N2CJ
 Numpad 9 - Hu Tao 9H1CJ
-Numpad + - Klee
+Alt + Numpad 1 - Klee N1CJ
+Alt + Numpad 2 - Klee N2H1
+Alt + Numpad 3 - Klee AutoAttack (Hold WASD + Macro Key)
 
 Python
 Tab + ~ (tilt or Ё) - Refresh the list of melodies
 Tab + 1 2 3 4 5 6 7 8 9 0 - Play a melody on the lyre of the winds
-Tab + Space - Stop playback
+Space - Stop playback
 
 ReShade
 Home - Open ReShade menu

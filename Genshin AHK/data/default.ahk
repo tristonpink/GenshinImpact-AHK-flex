@@ -75,7 +75,7 @@ Checkbox1bhopDelay=1
 Checkbox1bhopDelayMs=100
 
 metodVvoda=1
-;Выбор режима ввода 1 - SendInput, 2 - SendPlay, 3 - WinApi
+;Выбор режима ввода 1 - SendInput, 2 - WinApi, 3 - AHI+Input
 
 showtooltipVvoba=1
 ;Отображать Tooltip подсказки вверху при выборе макроса нумпад клавиатурой, 1 - да 0 - нет
@@ -83,7 +83,7 @@ showtooltipVvoba=1
 BrauzerCheck=0
 ;Выбор браузера для запуска карты: 0 - Браузер по умолчанию, 1 - указать нужный браузер ниже
 
-BrauzerPick="C:\Users\Nagibskiy\AppData\Local\Programs\Opera GX\launcher.exe"
+BrauzerPick=chrome.exe --app=https://webstatic-sea.mihoyo.com/app/ys-map-sea/
 ;Указать путь к браузеру(кавычки не обязательно) Пример: firefox.exe, chrome.exe, opera.exe, browser.exe для установленных браузеров, для портативных абсолютный путь "C:\Users\Nagibskiy\Desktop\GoogleChromePortable\GoogleChromePortable.exe"
 
 GameExe=ahk_class UnityWndClass
