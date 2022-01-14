@@ -27,6 +27,9 @@ Numpad 9 - Hu Tao 9H1CJ
 Alt + Numpad 1 - Klee N1CJ
 Alt + Numpad 2 - Klee N2H1
 Alt + Numpad 3 - Klee AutoAttack(Удерживать WASD + Macro Key)
+Alt + Numpad 4 - AutoAttack
+Alt + Numpad 5 - Xiao SpamPlunge
+Alt + Numpad 6 - Xiao N1SpamPlunge
 
 Python
 Tab + ~(тильт или Ё) - Обновить список мелодий
@@ -46,63 +49,6 @@ CTRL-ALT-Numpad0 - Запустить ярлык GenshAHK.lnk
 
 
 !play
-
-
-База	Крит	Среднее
-3 626	9 413	5 860 	лук амоса т1+пасивка
-2 586	7 230	5 405 	небесное крыло т1
-3 313	8 601	5 354 	хамаюми т5+пасивка
-2 438	6 328	5 153 	*Рогатка т5+пасивка
-3 137	8 143	5 069 	составной т5+пасивка
-3 069	7 966	4 959 	лук амоса т1
-2 972	7 716	4 803 	составной т1+пасивка
-2 924	7 590	4 725 	хамаюми т1+пасивка
-База	Крит	Среднее
-2 801	7 271	5 039	Венти с1	составной
-2 992	7 766	4 964 	емия		составной
-3 030	9 029	4 356	гань юй		составной
-2 801	7 271	3 789	Венти		составной
-2 276	5 908	5 602	Венти с1	рогатка с5 + пасивочка
-2 448	6 355	5 281	Ёимия		рогатка с5 + пасивочка
-2 483	7 398	5 103	гань юй		рогатка с5 + пасивочка
-2 276	5 908	4 212	Венти		рогатка с5 + пасивочка
-
-База	Крит	Среднее	без артефактов
-588		883		924		Венти с1	Рогатка
-657		1 238	867		Гань Юй		Рогатка
-646		968		825		Ёимия		Рогатка
-588		883		695		Венти		Рогатка
-815		1 222	1111	Венти с1	составной
-883		1 324	990		Ёимия		составной
-897		1 689	936		Гань Юй		составной
-815		1 222	835		Венти		составной
-
-
-Обычн.	Крит.	Средн.	Зулин
-3 382	6 707	5 440	хамаюми т5
-3 207	6 360	5 159	составной т5
-3 043	6 034	4 894	составной
-2 985	5 919	4 801	хамаюми
-2 486	4 931	4 762	рогатка т5
-Обычн.	Крит.	Средн.	Крампус
-2 992	7 766	4 964	составной
-2 448	6 355	5 281	рогатка т5
-
-
-
-
-21 день - 1 банер
----таблица крамбубликса
-Эола			~24 ноября		2.3 Version
-Альбедо			~24 ноября		2.3 Version
-Итто + Горо		~15 декабря		2.3 Version
-Сяо + Ганьюй	~5 января		2.4 Version
-ШэньХэ+ЮньЦзинь					2.4 Version
-ЧжунЛи + ?						2.5 Version
-Яэ + ?							2.5 Version
-Аято							2.6 Version
-Бай Джу							2.6 Version
----
 
 
 
@@ -126,17 +72,11 @@ CTRL-ALT-Numpad0 - Запустить ярлык GenshAHK.lnk
 
 
 
-12:22:12(1332) убийство папаратника 12:26:49(1609) возрождение (277) 
-11:29:10(1750) убийство папаратника и моментальное возрождение (11:28:50 пришел к нему)
-12:29:10(1750) убийство папаратника 12:33:10(1990) возрождение (240)
-11:30:54(1854) убийство папаратника 11:34:50(2090) возрождение (236)
-11:36:28(2188) убийство папаратника 11:40:50(2450) возрождение (262)
-11:33:50(2030) убийство вишапика 11:37:50 возрождение
-11:39:15(2355) убийство вишапика 11:43:13 возрождение
 
 
+; 0.0.0.0 upload.mihoyo.com
+; 0.0.0.0 log-upload-os.mihoyo.com
 
-добавить вейвдеши на дилюка юлу нингуин хутао
 
  	;Space vk20
   	;LShift vkA0
@@ -145,10 +85,25 @@ CTRL-ALT-Numpad0 - Запустить ярлык GenshAHK.lnk
 
 
 
+
+
+
+
+
+Изменения: 14.01.2022
+ - Исправление масштабирования оверлея и удаление надстройки
+ - Оверлей оружки
+ - Небольшие исправления GUI
+ - Alt + Numpad 4 - AutoAttack(60мс)
+ - Alt + Numpad 5 - Xiao SpamPlunge
+ - Alt + Numpad 6 - Xiao N1SpamPlunge
+
+Изменения: 05.01.2022
+ - Изменения оверлея (+Мико)
+
 Изменения: 21.12.2021
  - Добавлены Горо и Итто в 6 стр оверлея +пушки
  - Подкручен бинд на карту, отключена максимизация окна(вернуть если будут проблемы)
-
 
 Изменения: 10.12.2021
  - Numpad 6 - Legit лучники если кикает с сервера, c 10.12.21 не кикает
@@ -341,7 +296,7 @@ CTRL-ALT-Numpad0 - Запустить ярлык GenshAHK.lnk
 
 
 ;===============================дерективы
-WinName:= "Genshi AHK Flex v5.3 by Kramar1337"
+WinName:= "Genshi AHK Flex v5.4 by Kramar1337"
 #NoEnv
 SendMode Input
 SetWorkingDir %A_ScriptDir%
@@ -607,7 +562,7 @@ IniRead, DirGame, data\genConfig.ini, Setings, DirGame
 IniRead, metodVvoda, data\genConfig.ini, Setings, metodVvoda
 IniRead, showtooltipVvoba, data\genConfig.ini, Setings, showtooltipVvoba
 IniRead, showmegui, data\genConfig.ini, Setings, showmegui
-IniRead, ScaleFIX, data\genConfig.ini, Setings, ScaleFIX
+
 
 IniRead, Checkbox1map, data\genConfig.ini, Setings, Checkbox1map
 IniRead, Checkbox1overlay, data\genConfig.ini, Setings, Checkbox1overlay
@@ -637,23 +592,10 @@ IniRead, GlLanguage, data\genConfig.ini, Setings, GlLanguage
 
 
 
-;========================если с конфига подтянули ScaleFIX=1 то оверлей будет исправлен для систем с масштабированием например ноуты
-if ScaleFIX
-{
-; Стандартный масштаб(100) умножить на A_ScreenDPI и разделить на стандартный DPI(96) получим GetScaleFactorForMonitor без API, т.е масштабирование
-; Получаем масштаб экрана
-ScaleFactor:=round(100 * A_ScreenDPI / 96)
-ScaleFactorEq:=ScaleFactor / 100
-; ScaleFactor:=115
-; MsgBox %ScaleFactorEq%
-ScreenWidthRe1:=round(A_ScreenWidth / ScaleFactorEq)
-ScreenHeightRe1:=round(A_ScreenHeight / ScaleFactorEq)
-}
-Else
-{
+
 ScreenWidthRe1:=A_ScreenWidth
 ScreenHeightRe1:=A_ScreenHeight
-}
+
 
 
 If (ONregreadDir == 1) ; Если в конфиге путь к игре реестр вкл, то:
@@ -747,9 +689,9 @@ Gui, 1: Add, Text, v1Textautowalk x104 y88 w80 h23, *Auto walking
 Gui, 1: Add, CheckBox, vCheckbox0autowalk x16 y88 w13 h18 Checked%Checkbox1autowalk%
 Gui, 1: Add, Edit, x40 y136 w61 h21 vkey_skipNPS, %key_skipNPS%
 if GlLanguage
-Gui, 1: Add, Text, v1TextskipNPS x104 y136 w80 h23, Скип диалогов
+Gui, 1: Add, Text, v1TextskipNPS x104 y136 w90 h23, Скип диалогов
 Else
-Gui, 1: Add, Text, v1TextskipNPS x104 y136 w80 h23, Dialogue skip
+Gui, 1: Add, Text, v1TextskipNPS x104 y136 w90 h23, Dialogue skip
 
 Gui, 1: Add, CheckBox, vCheckbox0skipNPS x16 y136 w13 h18 Checked%Checkbox1skipNPS%
 Gui, 1: Add, Edit, x40 y112 w61 h21 vkey_fastlyt, %key_fastlyt%
@@ -851,7 +793,7 @@ Gui, 1: Add, CheckBox, vCheckboxshowmegui x16 y224 w120 h23 Checked%showmegui%, 
 
 Gui, 1: Add, CheckBox, vCheckboxGlLanguage x16 y176 w120 h23 Checked%GlLanguage%, RU language GUI
 Gui, 1: Add, CheckBox, vCheckboxMousemoveBow x16 y248 w120 h23 Checked%MousemoveBow%, RCS WinApi Bow
-Gui, 1: Add, CheckBox, vCheckboxScaleFIX x160 y200 w120 h23 Checked%ScaleFIX%, FIX Overlay Scale
+; Gui, 1: Add, CheckBox, vCheckboxScaleFIX x160 y200 w120 h23 Checked%ScaleFIX%, FIX Overlay Scale
 Gui, 1: Add, CheckBox, vCheckboxHighperformancemode x160 y176 w120 h23 Checked%Highperformancemode%, AHK Max Speed
 Gui, 1: Add, CheckBox, vCheckboxFIXchat x160 y224 w120 h23 Checked%FIXchat%, FIX Macro + chat
 
@@ -897,7 +839,7 @@ Gui, 1: Add, ListBox, x16 y40 w82 h43 vListKeyDif AltSubmit, SendInput|WinApi|AH
 Gui, 1: Add, Button, gpickinput x104 y48 w38 h23, Pick
 Gui, 1: Add, CheckBox, vCheckboxScScHachCh x16 y160 w129 h23 Checked%ScHachCh%, Hash changer
 Gui, 1: Add, CheckBox, vCheckboxScWinrenamer x16 y184 w129 h23 Checked%ScWinrenamer%, WindowNameChanger
-Gui, 1: Add, CheckBox, vCheckboxScRandomT x16 y208 w140 h23 Checked%ScRandomT%, Random 40ms (NoMacro)
+Gui, 1: Add, CheckBox, vCheckboxScRandomT x16 y208 w160 h23 Checked%ScRandomT%, Random 40ms (NoMacro)
 Gui, 1: Add, CheckBox, vCheckboxScRenamer x16 y136 w129 h23 Checked%ScRenamer%, Name changer
 Gui, 1: Add, CheckBox, vCheckboxScOverlay x16 y232 w140 h23 Checked%ScOverlay%, UID Hide (Window)
 
@@ -937,7 +879,7 @@ Gui, 1: Add, Text, x16 y72 w120 h23, Step 1. Instal
 Gui, 1: Add, Text, x16 y96 w157 h23, Step 2. Run and start the game
 Gui, 1: Add, Picture, x208 y16 w252 h256 +BackgroundTrans, data\page5pcmr.png
 Gui, 1: Tab, 6 	;==============ссылки=====================================================================ссылки====Tab
-Gui, 1: Add, Picture, x5 y175 w456 h100, data\forecast.png
+
 if GlLanguage
 Gui, 1: Add, GroupBox, x8 y24 w147 h146, Разное
 Else
@@ -1055,7 +997,7 @@ HpBarW:=ScreenWidthRe1
 HpBarH:=ScreenHeightRe1
 HpBarX:=0
 HpBarY:=0
-Gui, 99: +AlwaysOnTop +ToolWindow -Caption +LastFound
+Gui, 99: +AlwaysOnTop +ToolWindow -Caption +LastFound -DPIScale
 ; WinSet, TransColor, 12345
 ; Gui, 99: Color, 12345
 ;====================================гладкий переход
@@ -1068,19 +1010,8 @@ Path = "%A_ScriptDir%\data\ganyu.gif"
 ;width := 184, height := 281
 width := Round(ScreenWidthRe1 *.07187)
 height := Round(ScreenHeightRe1 *.19513)
-
-
-if ScaleFIX
-{
-widthex1 := Round(width * ScaleFactorEq + 1), heightex1 := Round(height * ScaleFactorEq + 1)
-}
-Else
-{
 widthex1 := Round(ScreenWidthRe1 *.07187)
 heightex1 := Round(ScreenHeightRe1 *.19513)
-}
-
-
 width2 := Round(ScreenWidthRe1 *.78125)
 height2 := Round(ScreenHeightRe1 *.74305)
 Gui, 99: Add, ActiveX, x%width2% y%height2% w%width% h%height% Disabled voIE, Shell.Explorer
@@ -1274,9 +1205,6 @@ IniWrite, %showtooltipVvoba%, data\genConfig.ini, Setings, showtooltipVvoba
 	IniRead, showmegui, %FileVarImport%, Setings, showmegui
 	if !(showmegui = "ERROR")
 IniWrite, %showmegui%, data\genConfig.ini, Setings, showmegui
-	IniRead, ScaleFIX, %FileVarImport%, Setings, ScaleFIX
-	if !(ScaleFIX = "ERROR")
-IniWrite, %ScaleFIX%, data\genConfig.ini, Setings, ScaleFIX
 	IniRead, Checkbox1map, %FileVarImport%, Setings, Checkbox1map
 	if !(Checkbox1map = "ERROR")
 IniWrite, %Checkbox1map%, data\genConfig.ini, Setings, Checkbox1map
@@ -2153,8 +2081,81 @@ jopa20:=false
 if showtooltipVvoba
 ToolTip, Klee AutoAttack, 0, 0
 Return
-
-
+;===============================AutoAttack
+*~$!Numpad4::
+jopa1:=false
+jopa2:=false
+jopa3:=false
+jopa4:=false
+jopa5:=false
+jopa6:=false
+jopa7:=false
+jopa8:=false
+jopa9:=false
+jopa10:=false
+jopa11:=false
+jopa12:=false
+jopa13:=false
+jopa14:=true
+jopa15:=false
+jopa16:=false
+jopa17:=false
+jopa18:=false
+jopa19:=false
+jopa20:=false
+if showtooltipVvoba
+ToolTip, AutoAttack, 0, 0
+Return
+;===============================СЯо прыжки
+*~$!Numpad5::
+jopa1:=false
+jopa2:=false
+jopa3:=false
+jopa4:=false
+jopa5:=false
+jopa6:=false
+jopa7:=false
+jopa8:=false
+jopa9:=false
+jopa10:=false
+jopa11:=false
+jopa12:=false
+jopa13:=false
+jopa14:=false
+jopa15:=true
+jopa16:=false
+jopa17:=false
+jopa18:=false
+jopa19:=false
+jopa20:=false
+if showtooltipVvoba
+ToolTip, Xiao SpamPlunge, 0, 0
+Return
+;===============================СЯо N1SpamPlunge
+*~$!Numpad6::
+jopa1:=false
+jopa2:=false
+jopa3:=false
+jopa4:=false
+jopa5:=false
+jopa6:=false
+jopa7:=false
+jopa8:=false
+jopa9:=false
+jopa10:=false
+jopa11:=false
+jopa12:=false
+jopa13:=false
+jopa14:=false
+jopa15:=false
+jopa16:=true
+jopa17:=false
+jopa18:=false
+jopa19:=false
+jopa20:=false
+if showtooltipVvoba
+ToolTip, Xiao N1SpamPlunge, 0, 0
+Return
 
 
 AntiVACHashChanger:="fghfh3534gjdgdfgfj6867jhmbdsq4123asddfgdfgaszxxcasdf423dfght7657ghnbnghrtwer32esdfgr65475dgdgdf6867ghjkhji7456wsdfsf34sdfsdf324sdfgdfg453453453456345gdgdgdfsf"
@@ -2710,6 +2711,55 @@ IfWinActive, %gameexe1337%
 }
 }
 
+if jopa14 							;_________________________AutoAttack
+{
+IfWinActive, %gameexe1337%
+{
+	Loop
+	{
+	if !GetKeyState(key_animcancel, "P")
+		Break
+	Sleep 60
+	SendInput, {Blind}{vk1}	;LButton vk1
+	}
+}
+}
+
+if jopa15 							;_________________________сяо спам Plunge
+{
+IfWinActive, %gameexe1337%
+{
+	Loop
+	{
+	if !GetKeyState(key_animcancel, "P")
+		Break
+	SendInput {vk20}
+	Sleep 140 	;140 норм на сяо
+	SendInput, {Blind}{vk1}
+	Sleep 25
+	}
+}
+}
+
+if jopa16 							;_________________________сяо  спам нормал + Plunge под синцю
+{
+IfWinActive, %gameexe1337%
+{
+	Loop
+	{
+	if !GetKeyState(key_animcancel, "P")
+		Break
+	SendInput, {Blind}{vk1}
+	Sleep 60
+	SendInput {vk20}
+	Sleep 140
+	SendInput, {Blind}{vk1}
+	Sleep 60
+	}
+}
+}
+
+
 return
 
 
@@ -2965,7 +3015,6 @@ IniWrite, %CheckboxHighperformancemode%, data\genConfig.ini, Setings, Highperfor
 IniWrite, %CheckboxMousemoveBow%, data\genConfig.ini, Extra, MousemoveBow
 IniWrite, %CheckboxGlLanguage%, data\genConfig.ini, Setings, GlLanguage
 IniWrite, %Checkboxshowmegui%, data\genConfig.ini, Setings, showmegui
-IniWrite, %CheckboxScaleFIX%, data\genConfig.ini, Setings, ScaleFIX
 IniWrite, %CheckboxScWinrenamer%, data\genConfig.ini, Setings, ScWinrenamer
 IniWrite, %CheckboxScRenamer%, data\genConfig.ini, Setings, ScRenamer
 IniWrite, %CheckboxScScHachCh%, data\genConfig.ini, Setings, ScHachCh
@@ -3850,6 +3899,9 @@ Numpad 9 - Hu Tao 9H1CJ
 Alt + Numpad 1 - Klee N1CJ
 Alt + Numpad 2 - Klee N2H1
 Alt + Numpad 3 - Klee AutoAttack(Удерживать WASD + Macro Key)
+Alt + Numpad 4 - AutoAttack
+Alt + Numpad 5 - Xiao SpamPlunge
+Alt + Numpad 6 - Xiao N1SpamPlunge
 
 Python
 Tab + ~(тильт или Ё) - Обновить список мелодий
@@ -3896,9 +3948,12 @@ Numpad 9 - Hu Tao 9H1CJ
 Alt + Numpad 1 - Klee N1CJ
 Alt + Numpad 2 - Klee N2H1
 Alt + Numpad 3 - Klee AutoAttack (Hold WASD + Macro Key)
+Alt + Numpad 4 - AutoAttack
+Alt + Numpad 5 - Xiao SpamPlunge
+Alt + Numpad 6 - Xiao N1SpamPlunge
 
 Python
-Tab + ~ (tilt or Ё) - Refresh the list of melodies
+Tab + ~ - Refresh the list of melodies
 Tab + 1 2 3 4 5 6 7 8 9 0 - Play a melody on the lyre of the winds
 Space - Stop playback
 
