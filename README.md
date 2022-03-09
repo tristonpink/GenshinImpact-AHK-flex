@@ -1,3 +1,6 @@
+<details>
+<summary>Старое описание</summary>
+
 # Genshi AHK Flex v5.42
 
 AHK скрипт для Genshin Impact.
@@ -417,3 +420,5 @@ Deencast - Помощь с pip instal
 
 
 Ps. Когда нибуть я научусь работать с [патернами](https://www.unknowncheats.me/forum/programming-for-beginners/171994-understanding-pattern-scanning-concept.html) и сделаю FPS Unlocker... когда это будет... Я писал это пол года назад и я все еще не научился этому...
+
+</details>
