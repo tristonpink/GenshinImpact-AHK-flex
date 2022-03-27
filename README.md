@@ -1,14 +1,15 @@
 
-# Genshi AHK Flex v6
+# Genshi AHK Flex v6.1
 
 AHK скрипт для Genshin Impact.
 
 [Подробное описание](https://github.com/Kramar1337/GenshinImpact-AHK-flex/wiki)
 
-![hippo](https://media.giphy.com/media/tzZuVHOS40g2x3S0m5/giphy.gif)
+![hippo](https://media.giphy.com/media/xWd1kU8h7JkmtQpQjB/giphy.gif)
 
 __Что по функционалу:__
 
+- Авто готовка
 - Рыбалка
 - Бинд на интерактивную карту
 - Оверлей с разной инфой
@@ -32,6 +33,8 @@ __Что по функционалу:__
   + Ganyu Hold
   + Ningguang
   + Плавание
+  + Kaeya
+  + Mona infinite swimming
 
 __Возможности:__
 
@@ -52,9 +55,11 @@ __Возможности:__
 __Требования к правильной работе скрипта:__
 
 - Правильная установка Autohotkey!!!
+- Fullscreen или Borderless режим
 - Запуск от имени Администратора
 - 60 FPS в игре
 - Пинг < 100
+
 
 :memo:__Показания к применению:__:memo:
 
@@ -130,6 +135,8 @@ Numpad 6 - Legit лучники если кикает с сервера
 Numpad 7 - Diluc DragonStrike(Ручной)
 Numpad 8 - Hu Tao N2CJ (slow)
 Numpad 9 - Hu Tao H1CJ
+NumpadAdd - Expeditions
+NumpadSub - Kaeya seafarer
 Alt + Numpad 0 - Hu Tao N2CJ (fast)
 Alt + Numpad 1 - Klee N1CJ
 Alt + Numpad 2 - Klee N2H1
@@ -140,7 +147,8 @@ Alt + Numpad 6 - Xiao N1SpamPlunge
 Alt + Numpad 7 - Ganyu Hold (Test 1)
 Alt + Numpad 8 - Ganyu Hold (Test 2)
 Alt + Numpad 9 - Swimming
-Alt + NumpadAdd - Expeditions(Test)
+Alt + NumpadAdd - Mona infinite swimming (дабл клик вкл, сингл клик выкл)
+Alt + NumpadSub - Auto coсking (дабл клик вкл, сингл клик выкл)
 
 Python
 Tab + ~(тильт или Ё) - Обновить список мелодий
@@ -156,8 +164,22 @@ Insert - Включить/отключить ReShade
 <details>
 <summary>==Список изменений==</summary>
 
-Изменения: 06.03.2022
+Изменения: 27.03.2022
 
+ - Микро исправления
+ - Оверлей с выбором макросов
+ - Доп отладка
+ - Настройка таймера в минутах "TTimerahk1" в "genConfig.ini"
+ - NumpadSub - Мореплаватель Кея(не забыть переключиться в режим ходьбы)
+ - Alt + NumpadAdd - Мона бесконечная стамина в воде
+ - Alt + NumpadSub - Автоготовка
+ - Изменения оверлея
+
+Изменения: 18.03.2022
+ - ReShade теперь идеален, работают отражения, +ярлык для запуска обхода в трее
+ - Настраиваемый сбор экспедиций "genConfig.ini"
+  
+Изменения: 06.03.2022
  - ДПИскейл на уидхайд
  - Рандомизатор на все скрипты в "Настройках"
  - Мелкие исправления
