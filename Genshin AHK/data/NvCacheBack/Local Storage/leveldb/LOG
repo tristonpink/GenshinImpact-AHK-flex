@@ -1,8 +1,0 @@
-2022/04/03-16:32:50.659 d94 Reusing MANIFEST leveldb/MANIFEST-000001
-2022/04/03-16:32:50.660 d94 Recovering log #4
-2022/04/03-16:32:50.660 d94 Level-0 table #6: started
-2022/04/03-16:32:50.666 d94 Level-0 table #6: 9631 bytes OK
-2022/04/03-16:32:50.674 d94 Delete type=0 #4
-2022/04/03-19:57:57.932 d94 Level-0 table #9: started
-2022/04/03-19:57:57.935 d94 Level-0 table #9: 9928 bytes OK
-2022/04/03-19:57:57.939 d94 Delete type=0 #7
