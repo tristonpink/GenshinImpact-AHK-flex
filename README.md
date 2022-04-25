@@ -479,3 +479,9 @@ Deencast - Помощь с pip instal
 
 🙈 Завтра VAC 🙉
 
+| Ресурсы которые я использовал |
+| Ссылка | Название | Описание |
+| --- | --- | --- |
+| [YouTube](https://www.youtube.com/c/LTRipjaws/videos) | ReShade | Решейд брал у этого чела |
+| [Github](https://github.com/NineTailTeam/Genshin-Impact-Macro) | Genshin-Impact-Macro | Macros for Genshin Impact AHK |
+| [Github](https://github.com/evilC/AutoHotInterception) | AutoHotInterception | Драйвер, кто понял тот понял |
