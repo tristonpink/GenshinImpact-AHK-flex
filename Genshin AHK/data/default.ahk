@@ -87,6 +87,7 @@ ExInaK4=0
 ExInaK5=0
 ExInaK6=0
 [Setings]
+Fastpickcfg=0
 TTimerahk1=5
 CheckUpdatePic=1
 AutoExitAHK=0

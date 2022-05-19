@@ -30,9 +30,9 @@ Alt + Numpad 0 - Hu Tao N2CJ (fast)
 Alt + Numpad 1 - Klee N1CJ
 Alt + Numpad 2 - Klee N2H1
 Alt + Numpad 3 - Klee AutoAttack(Удерживать WASD + Macro Key)
-Alt + Numpad 4 - Xiao N1H1Plunge
-Alt + Numpad 5 - Xiao SpamPlunge
-Alt + Numpad 6 - Xiao N1SpamPlunge
+Alt + Numpad 4 - Xiao SpamPlunge(14 прыжков)
+Alt + Numpad 5 - Xiao SpamPlunge(13 прыжков)
+Alt + Numpad 6 - Xiao N1SpamPlunge(11 прыжков)
 Alt + Numpad 7 - Ganyu Hold (Test 1)
 Alt + Numpad 8 - Ganyu Hold (Test 2)
 Alt + Numpad 9 - Swimming (дабл клик вкл, сингл клик выкл)
@@ -125,12 +125,6 @@ https://www.hoyolab.com/article/3973326
 | Github | FPS Unlocker | External чит, +решейд |
 | Github | Genshin-Impact-Macro | Macros for Genshin Impact AHK |
 
-
-
-
-
-
-
 https://www.unknowncheats.me/forum/other-mmorpg-and-strategy/481738-genshin-xyz.html
 https://github.com/CallowBlack/genshin-cheat
 https://github.com/34736384/genshin-fps-unlock
@@ -139,13 +133,83 @@ https://github.com/NineTailTeam/Genshin-Impact-Macro
 
 
 
+
+| Ссылка | Название | Описание |
+| --- | --- | --- |
+| [YouTube](https://www.youtube.com/c/LTRipjaws/videos) | ReShade | Решейд брал у этого чела |
+| [Github](https://github.com/NineTailTeam/Genshin-Impact-Macro) | Genshin-Impact-Macro | Macros for Genshin Impact AHK |
+| [Github](https://github.com/evilC/AutoHotInterception) | AutoHotInterception | Драйвер, кто понял тот понял |
+| [Github](https://github.com/crosire/reshade-shaders/tree/nvidia) | Reshade & Nvidia Ansel | Доп фильтры для видеокарт NVIDIA |
+
+
+
+
+
+🔗Гипотетическая статистика по нарушениям(+- актуально на 05.22):🔗
+
+| Нарушение | Наказание | Дата | Проверяющий |
+| --- | --- | --- | --- |
+| __Работа с файлами игры:__ |  |  |  |
+| Изменение файлов(модели текстуры) | 1 бан 30 дней, 2 бан 15 лет | с первого дня | Рандом челы |
+| Изменение файлов(удаление катсцен) | ок | по 16.05.2022 | я |
+| Изменение файлов(звук) | ??? | ??? | ??? |
+| Изменение файлов(.dll бездумное редактирование) | бан навсегда | с первого дня* | Рандом челы |
+| Изменение файлов(.dll Linux patсh) | ок | по 16.05.2022 | Челы на линуксе |
+| __Разновидности ПО:__ |  |  |  |
+| AHK скрипты | ок | по 16.05.2022 | я |
+| Python скрипты | ок | по 16.05.2022 | я |
+| Использование экстернал FPS Unlocker | ок | по 16.05.2022 | я |
+| Использование решейда(инжектор или подмена) | ок | 3 раза менялось обнаружение | я |
+| Прохождение бездны с читом(килл аура, рапидфаер 5, год мод) на 45AR(эмбер) | 1 бан 30 дней, 2 бан 15 лет | 3.05.2022 | я |
+| Прохождение бездны с читом(килл аура, рапидфаер 5, год мод) на 50AR(сяо) | ок | 3.05.2022 | я |
+| Работа программ с подозрительным именем(cheatengine.exe) или хешем | ??? | ??? | ??? |
+| __Манипуляции с аккаунтом:__ |  |  |  |
+| Много аккичей(+-20) с одного IP и ID(одновременно по очереди) | бан навсегда всех аккичей серии | 11.10.2020 | я |
+| VPN с разных регионов и разных ID | ??? | ??? | ??? |
+| Покупка - продажа аккаунта(единоразовая резкая смена IP и ID) | ок | 16.05.2022 | я |
+| __Манипуляции с клиентом игры:__ |  |  |  |
+| Игра на пиратских серверах | ??? | ??? | ??? |
+| Игра на пиратских серверах(максимум защиты) | ок | 16.05.2022 | я |
+
+
+
+
+https://gc-tools.exzork.me/artifact
+https://pastebin.com/1frUjpa3
+!killall
+!give 102 2000000 - повысить ранг до 60 уровня.
+!give 202 10000000 - 10 млн моры, чтобы качать таланты и прочее. ВСЕ вещи в инвентаре по 1000 штук.
+!setworldlevel 8 - 8 уровень мира. можете поставить по своему усмотрению.
+!giveall - получите всех персов 90 лвла, все оружки 5 пробуды, 6 конст на каждого персонажа и скины.
+https://gc-tools.exzork.me/artifact
+https://pastebin.com/1frUjpa3
+/spawn 21010101 100 90
+где 21010101 - айди хиличурла, 1 - количество хиличурлов и 90 - уровень хиличурла.
+Телепортация
+Когда вы хотите куда-то телепортироваться, используйте внутриигровую функцию маркировки на карте.
+Отметьте точку на карте, используя маркировку рыболовного крючка (последняя).
+(Необязательно) переименуйте маркер карты в число, чтобы переопределить координату Y по умолчанию (высота, по умолчанию 300).
+Подтвердите и закройте карту.
+Вы увидите, как ваш персонаж падает с очень высокой точки назначения, именно в том месте, которое вы отметили.
+
+!talent XXX YYY
+
+
 Запланировано:
-дополнить описание
 
 
 
 
 
+
+
+Изменения: 15.05.2022
+ - Кликер переключения персонажа "Fast Pick 1-2-3-4"
+ - Заглушка для пикера персов
+ - Оверлей изменения: магаз паймон, оружие, +Хейдзо
+ - Микро изменения
+ - Alt + Numpad 4 - Xiao SpamPlunge(14 прыжков)
+ - Alt + Numpad 5 - Xiao SpamPlunge(13 прыжков)
 
 Изменения: 24.04.2022
  - Автоготовка терь рили фулл авто!
@@ -520,7 +584,7 @@ IniRead, ScWinrenamer, data\genConfig.ini, Setings, ScWinrenamer ; провер�
 IniRead, ScRenamer, data\genConfig.ini, Setings, ScRenamer ; проверка Renamera
 IniRead, ScHachCh, data\genConfig.ini, Setings, ScHachCh ; проверка ScHachCh
 IniRead, ScRandomT, data\genConfig.ini, Setings, ScRandomT ; проверка рандом таймер
-IniRead, ScOverlay, data\genConfig.ini, Setings, ScOverlay ; проверка uid overlay
+; IniRead, ScOverlay, data\genConfig.ini, Setings, ScOverlay ; проверка uid overlay
 
 If ScHachCh
 {
@@ -542,22 +606,22 @@ SplitPath, A_ScriptFullPath,,, 2z2ext,, 	;извлечь из строки ра�
 FileMove, %A_ScriptFullPath%, %A_ScriptDir%\%password%.%2z2ext%
 savereloadvar = %A_ScriptDir%\%password%.%2z2ext%
 }
-If ScOverlay
-{
-ScreenWidthRe1:=A_ScreenWidth
-ScreenHeightRe1:=A_ScreenHeight
-Gui,uid: +AlwaysOnTop +ToolWindow -Caption +LastFound +E0x20 -DPIScale
-Gui,uid: Color, 0x000000
-Random, rand1488, 33, 35
-password := gen_password(rand1488)	
-;получить координаты 1 и 2 точки и вычесть 3 и 4
-HpBarW2:=round((ScreenWidthRe1*.9695) - (ScreenWidthRe1*.8738))
-HpBarH2:=round((ScreenHeightRe1*.9965) - (ScreenHeightRe1*.9743))
-HpBarX2:=round(ScreenWidthRe1*.8738)
-HpBarY2:=round(ScreenHeightRe1*.9743)
-Gui,uid: Show, w%HpBarW2% h%HpBarH2% x%HpBarX2% y%HpBarY2%, %password%
-;==============
-}
+; If ScOverlay
+; {
+; ScreenWidthRe1:=A_ScreenWidth
+; ScreenHeightRe1:=A_ScreenHeight
+; Gui,uid: +AlwaysOnTop +ToolWindow -Caption +LastFound +E0x20 -DPIScale
+; Gui,uid: Color, 0x000000
+; Random, rand1488, 33, 35
+; password := gen_password(rand1488)	
+; получить координаты 1 и 2 точки и вычесть 3 и 4
+; HpBarW2:=round((ScreenWidthRe1*.9695) - (ScreenWidthRe1*.8738))
+; HpBarH2:=round((ScreenHeightRe1*.9965) - (ScreenHeightRe1*.9743))
+; HpBarX2:=round(ScreenWidthRe1*.8738)
+; HpBarY2:=round(ScreenHeightRe1*.9743)
+; Gui,uid: Show, w%HpBarW2% h%HpBarH2% x%HpBarX2% y%HpBarY2%, %password%
+; ==============
+; }
 
 
 Global metodVvoda 	;зарегать глобальную переменную для режимов ввода: 1 input, 2 play, 3 winapi
@@ -763,13 +827,10 @@ Hotkey, *~$%key_LabelANumpad9%, LabelANumpad9, on
 
 IniRead, key_LabelNumpadAdd, data\genConfig.ini, Binds, key_LabelNumpadAdd
 Hotkey, *~$%key_LabelNumpadAdd%, LabelNumpadAdd, on
-
 IniRead, key_LabelANumpadAdd, data\genConfig.ini, Binds, key_LabelANumpadAdd
 Hotkey, *~$%key_LabelANumpadAdd%, LabelANumpadAdd, on
-
 IniRead, key_LabelNumpadSub, data\genConfig.ini, Binds, key_LabelNumpadSub
 Hotkey, *~$%key_LabelNumpadSub%, LabelNumpadSub, on
-
 IniRead, key_LabelANumpadSub, data\genConfig.ini, Binds, key_LabelANumpadSub
 Hotkey, *~$%key_LabelANumpadSub%, LabelANumpadSub, on
 
@@ -837,6 +898,18 @@ Hotkey, *~%key_bhop%, Metkakey_bhop, on
 ;не забыть что звездочка перед кнопкой разрешает несколько клавиш, тоесть W + Shift + Bhop, бхоп не тупит
 
 
+IniRead, Fastpickcfg, data\genConfig.ini, Setings, Fastpickcfg
+if Fastpickcfg
+{
+Hotkey, *~1, Metkakey_fastpick1, on
+Hotkey, *~2, Metkakey_fastpick2, on
+Hotkey, *~3, Metkakey_fastpick3, on
+Hotkey, *~4, Metkakey_fastpick4, on
+}
+
+
+
+
 ;====================Настройки трея
 Menu,Tray,NoStandard
 Menu,Tray,DeleteAll
@@ -859,9 +932,9 @@ Menu,Tray, Icon, Exit, shell32.dll,28, 16
 Menu,Tray, Icon, data\genicon.ico, ,1
 ;====================Gui настройки
 if GlLanguage
-Gui, 1: Add, Tab3, x0 y0 w469 h277, Бинды|Настройки|Безопасность|Реестр|Графика|Ресурсы
+Gui, 1: Add, Tab3, x0 y0 w469 h277, Бинды|Настройки|Безопасность|Реестр|ReShade|Ресурсы
 Else
-Gui, 1: Add, Tab3, x0 y0 w469 h277, Binds|Settings|Security|Registry|Graphics|Links
+Gui, 1: Add, Tab3, x0 y0 w469 h277, Binds|Settings|Security|Registry|ReShade|Links
 
 Gui, 1: Tab, 1 	;================главная======================================================================главная(бинды)===Tab
 if GlLanguage
@@ -896,7 +969,7 @@ Gui, 1: Add, Text, v1TextskipNPS x104 y139 w56 h23, Скип NPC
 Else
 Gui, 1: Add, Text, v1TextskipNPS x104 y139 w56 h23, Skip NPC
 
-Gui, 1: Add, CheckBox, vCheckbox0locknpc x162 y137 w41 h18 Checked%Checkbox1locknpc%, Lock
+; Gui, 1: Add, CheckBox, vCheckbox0locknpc x162 y137 w41 h18 Checked%Checkbox1locknpc%, Lock
 
 Gui, 1: Add, CheckBox, vCheckbox0skipNPS x16 y136 w13 h18 Checked%Checkbox1skipNPS%
 Gui, 1: Add, Edit, x40 y112 w61 h21 vkey_fastlyt, %key_fastlyt%
@@ -999,6 +1072,12 @@ Gui, 1: Add, CheckBox, vCheckboxFIXchat x160 y200 w120 h23 Checked%FIXchat%, FIX
 Gui, 1: Add, CheckBox, vCheckboxIsAdmin x160 y224 w120 h23 Checked%IsAdmin%, Run as Administrator
 
 Gui, 1: Add, CheckBox, vCheckboxAutoExitAHK x160 y248 w120 h23 +Checked%AutoExitAHK%, Auto Exit (3 sec)
+
+
+
+Gui, 1: Add, CheckBox, vCheckboxFastpickcfg x312 y200 w120 h23 Checked%Fastpickcfg%, Fast pick 1-2-3-4
+
+Gui, 1: Add, CheckBox, vCheckbox0locknpc x312 y176 w120 h23 Checked%Checkbox1locknpc%, Lock Skip NPC
 
 ;===============================Лира ветров
 
@@ -1284,8 +1363,11 @@ YheightPicOver2 := Round(ScreenHeightRe1 *.95625)
 Gui, 99: Add, Picture, w%widthPicOver% h%heightPicOver% x%XwidthPicOver% y%YheightPicOver% +BackgroundTrans gPicOverlay1, data\genOverlayNext.png
 Gui, 99: Add, Picture, w%widthPicOver% h%heightPicOver% x%XwidthPicOver2% y%YheightPicOver2% +BackgroundTrans gPicOverlay2, data\genOverlayNext.png
 
-Gui, 99: Font, % "s" round(A_ScreenWidth * (20 / 2560)) " q1 c0x400000 Bold", Comic Sans MS
+Gui, 99: Font, % "s" round(A_ScreenWidth * (20 / 2560)) " q1 c0x400000 Bold Underline", Comic Sans MS
 Gui, 99: Add, Text, % "vLabTextMyEdit" " x" round(A_ScreenWidth * (64 / 2560)) " y" round(A_ScreenHeight * (50 / 1440)) " +BackgroundTrans", Macro Key (Кликабельные строки)
+Gui, 99: Font
+Gui, 99: Font, % "s" round(A_ScreenWidth * (20 / 2560)) " q1 c0x400000 Bold", Comic Sans MS
+
 Gui, 99: Add, Text, % "vLabTextMyEdit0" " gLabelNumpad0" " x" round(A_ScreenWidth * (64 / 2560)) " y" round(A_ScreenHeight * (150 / 1440)) " +BackgroundTrans", Numpad 0 - Включить/отключить банихоп
 Gui, 99: Add, Text, % "vLabTextMyEdit1" " gLabelNumpad1" " x" round(A_ScreenWidth * (64 / 2560)) " y" round(A_ScreenHeight * (200 / 1440)) " +BackgroundTrans", Numpad 1 - AutoAttack
 Gui, 99: Add, Text, % "vLabTextMyEdit2" " gLabelNumpad2" " x" round(A_ScreenWidth * (64 / 2560)) " y" round(A_ScreenHeight * (250 / 1440)) " +BackgroundTrans", Numpad 2 - Ningguang
@@ -1304,8 +1386,8 @@ Gui, 99: Add, Text, % "vLabTextMyEdit10" " gLabelANumpad0" " x" round(A_ScreenWi
 Gui, 99: Add, Text, % "vLabTextMyEdit11" " gLabelANumpad1" " x" round(A_ScreenWidth * (64 / 2560)) " y" round(A_ScreenHeight * (800 / 1440)) " +BackgroundTrans", Alt + Numpad 1 - Klee N1CJ
 Gui, 99: Add, Text, % "vLabTextMyEdit12" " gLabelANumpad2" " x" round(A_ScreenWidth * (64 / 2560)) " y" round(A_ScreenHeight * (850 / 1440)) " +BackgroundTrans", Alt + Numpad 2 - Klee N2H1
 Gui, 99: Add, Text, % "vLabTextMyEdit13" " gLabelANumpad3" " x" round(A_ScreenWidth * (64 / 2560)) " y" round(A_ScreenHeight * (900 / 1440)) " +BackgroundTrans", Alt + Numpad 3 - Klee AutoAttack(Удерживать WASD + Macro Key)
-Gui, 99: Add, Text, % "vLabTextMyEdit14" " gLabelANumpad4" " x" round(A_ScreenWidth * (64 / 2560)) " y" round(A_ScreenHeight * (950 / 1440)) " +BackgroundTrans", Alt + Numpad 4 - Xiao N1H1Plunge
-Gui, 99: Add, Text, % "vLabTextMyEdit15" " gLabelANumpad5" " x" round(A_ScreenWidth * (64 / 2560)) " y" round(A_ScreenHeight * (1000 / 1440)) " +BackgroundTrans", Alt + Numpad 5 - Xiao SpamPlunge
+Gui, 99: Add, Text, % "vLabTextMyEdit14" " gLabelANumpad4" " x" round(A_ScreenWidth * (64 / 2560)) " y" round(A_ScreenHeight * (950 / 1440)) " +BackgroundTrans", Alt + Numpad 4 - Xiao SpamPlunge(14)
+Gui, 99: Add, Text, % "vLabTextMyEdit15" " gLabelANumpad5" " x" round(A_ScreenWidth * (64 / 2560)) " y" round(A_ScreenHeight * (1000 / 1440)) " +BackgroundTrans", Alt + Numpad 5 - Xiao SpamPlunge(13)
 Gui, 99: Add, Text, % "vLabTextMyEdit16" " gLabelANumpad6" " x" round(A_ScreenWidth * (64 / 2560)) " y" round(A_ScreenHeight * (1050 / 1440)) " +BackgroundTrans", Alt + Numpad 6 - Xiao N1SpamPlunge
 Gui, 99: Add, Text, % "vLabTextMyEdit17" " gLabelANumpad7" " x" round(A_ScreenWidth * (64 / 2560)) " y" round(A_ScreenHeight * (1100 / 1440)) " +BackgroundTrans", Alt + Numpad 7 - Ganyu Hold T1
 Gui, 99: Add, Text, % "vLabTextMyEdit18" " gLabelANumpad8" " x" round(A_ScreenWidth * (64 / 2560)) " y" round(A_ScreenHeight * (1150 / 1440)) " +BackgroundTrans", Alt + Numpad 8 - Ganyu Hold T2
@@ -1313,7 +1395,11 @@ Gui, 99: Add, Text, % "vLabTextMyEdit19" " gLabelANumpad9" " x" round(A_ScreenWi
 Gui, 99: Add, Text, % "vLabTextMyEdit20" " gLabelANumpadAdd" " x" round(A_ScreenWidth * (64 / 2560)) " y" round(A_ScreenHeight * (1250 / 1440)) " +BackgroundTrans", Alt + NumpadAdd - Mona-Ayaka infinite swimming (x1 - off, x2 - on)
 Gui, 99: Add, Text, % "vLabTextMyEdit44" " gLabelANumpadSub" " x" round(A_ScreenWidth * (64 / 2560)) " y" round(A_ScreenHeight * (1300 / 1440)) " +BackgroundTrans", Alt + NumpadSub - Auto coсking (x1 - off, x2 - on)
 
+Gui, 99: Font, % "s" round(A_ScreenWidth * (20 / 2560)) " q1 c0x400000 Bold Underline", Comic Sans MS
 Gui, 99: Add, Text, % "vLabTextMyEdit41" " x" round(A_ScreenWidth * (1400 / 2560)) " y" round(A_ScreenHeight * (50 / 1440)) " +BackgroundTrans", AHK
+Gui, 99: Font
+Gui, 99: Font, % "s" round(A_ScreenWidth * (20 / 2560)) " q1 c0x400000 Bold", Comic Sans MS
+
 Gui, 99: Add, Text, % "vLabTextMyEdit21" " x" round(A_ScreenWidth * (1400 / 2560)) " y" round(A_ScreenHeight * (150 / 1440)) " +BackgroundTrans", F1 - *Карта
 Gui, 99: Add, Text, % "vLabTextMyEdit22" " x" round(A_ScreenWidth * (1400 / 2560)) " y" round(A_ScreenHeight * (200 / 1440)) " +BackgroundTrans", F2 - *Оверлей
 Gui, 99: Add, Text, % "vLabTextMyEdit23" " x" round(A_ScreenWidth * (1400 / 2560)) " y" round(A_ScreenHeight * (250 / 1440)) " +BackgroundTrans", F3 - *Автоходьба
@@ -1328,12 +1414,20 @@ Gui, 99: Add, Text, % "vLabTextMyEdit31" " x" round(A_ScreenWidth * (1400 / 2560
 Gui, 99: Add, Text, % "vLabTextMyEdit32" " x" round(A_ScreenWidth * (1400 / 2560)) " y" round(A_ScreenHeight * (700 / 1440)) " +BackgroundTrans", Page Up - *Приостановить-Возобновить работу скрипта
 Gui, 99: Add, Text, % "vLabTextMyEdit33" " x" round(A_ScreenWidth * (1400 / 2560)) " y" round(A_ScreenHeight * (750 / 1440)) " +BackgroundTrans", V - Macro Key
 
+Gui, 99: Font, % "s" round(A_ScreenWidth * (20 / 2560)) " q1 c0x400000 Bold Underline", Comic Sans MS
 Gui, 99: Add, Text, % "vLabTextMyEdit34" " x" round(A_ScreenWidth * (1400 / 2560)) " y" round(A_ScreenHeight * (850 / 1440)) " +BackgroundTrans", Python
+Gui, 99: Font
+Gui, 99: Font, % "s" round(A_ScreenWidth * (20 / 2560)) " q1 c0x400000 Bold", Comic Sans MS
+
 Gui, 99: Add, Text, % "vLabTextMyEdit35" " x" round(A_ScreenWidth * (1400 / 2560)) " y" round(A_ScreenHeight * (900 / 1440)) " +BackgroundTrans", Tab + ~(тильт или Ё) - Обновить список мелодий
 Gui, 99: Add, Text, % "vLabTextMyEdit36" " x" round(A_ScreenWidth * (1400 / 2560)) " y" round(A_ScreenHeight * (950 / 1440)) " +BackgroundTrans", Tab + 1 2 3 4 5 6 7 8 9 0 - Воспроизвести мелодию на лире ветров
 Gui, 99: Add, Text, % "vLabTextMyEdit37" " x" round(A_ScreenWidth * (1400 / 2560)) " y" round(A_ScreenHeight * (1000 / 1440)) " +BackgroundTrans", Space - Остановить воспроизведение
 
+Gui, 99: Font, % "s" round(A_ScreenWidth * (20 / 2560)) " q1 c0x400000 Bold Underline", Comic Sans MS
 Gui, 99: Add, Text, % "vLabTextMyEdit38" " x" round(A_ScreenWidth * (1400 / 2560)) " y" round(A_ScreenHeight * (1100 / 1440)) " +BackgroundTrans", ReShade
+Gui, 99: Font
+Gui, 99: Font, % "s" round(A_ScreenWidth * (20 / 2560)) " q1 c0x400000 Bold", Comic Sans MS
+
 Gui, 99: Add, Text, % "vLabTextMyEdit39" " x" round(A_ScreenWidth * (1400 / 2560)) " y" round(A_ScreenHeight * (1150 / 1440)) " +BackgroundTrans", Home - Открыть ReShade меню
 Gui, 99: Add, Text, % "vLabTextMyEdit40" " x" round(A_ScreenWidth * (1400 / 2560)) " y" round(A_ScreenHeight * (1200 / 1440)) " +BackgroundTrans", Insert - Включить/отключить ReShade
 
@@ -1429,6 +1523,128 @@ return
 ;=====================================конец мейн потока, дальше идут метки
 
 
+
+
+;=====================================быстрый выбор персонажа 1 слот Fast pick
+Metkakey_fastpick1:
+TumblerToglerFastpick1 = 1
+TumblerToglerFastpick2 = 0
+TumblerToglerFastpick3 = 0
+TumblerToglerFastpick4 = 0
+Sleep 1
+IfWinNotActive, %gameexe1337%
+Return
+if FIXchat
+{
+	StructSize1337 := A_PtrSize + 16
+	VarSetCapacity(InfoStruct1337, StructSize1337)
+	NumPut(StructSize1337, InfoStruct1337)
+	DllCall("GetCursorInfo", UInt, &InfoStruct1337)
+	Result1337 := NumGet(InfoStruct1337, 8)
+	if (Result1337 <> 0)
+		Return
+}
+while(GetKeyState("vk31", "P")) 
+{
+SendInput {vk31}
+Sleep 22
+IfWinNotActive, %gameexe1337%
+Break
+if !(TumblerToglerFastpick1)
+Break
+}
+Return
+
+;=====================================быстрый выбор персонажа 2 слот
+Metkakey_fastpick2:
+TumblerToglerFastpick1 = 0
+TumblerToglerFastpick2 = 1
+TumblerToglerFastpick3 = 0
+TumblerToglerFastpick4 = 0
+Sleep 1
+IfWinNotActive, %gameexe1337%
+Return
+if FIXchat
+{
+	StructSize1337 := A_PtrSize + 16
+	VarSetCapacity(InfoStruct1337, StructSize1337)
+	NumPut(StructSize1337, InfoStruct1337)
+	DllCall("GetCursorInfo", UInt, &InfoStruct1337)
+	Result1337 := NumGet(InfoStruct1337, 8)
+	if (Result1337 <> 0)
+		Return
+}
+while(GetKeyState("vk32", "P")) 
+{
+SendInput {vk32}
+Sleep 22
+IfWinNotActive, %gameexe1337%
+Break
+if !(TumblerToglerFastpick2)
+Break
+}
+Return
+
+
+;=====================================быстрый выбор персонажа 3 слот
+Metkakey_fastpick3:
+TumblerToglerFastpick1 = 0
+TumblerToglerFastpick2 = 0
+TumblerToglerFastpick3 = 1
+TumblerToglerFastpick4 = 0
+Sleep 1
+IfWinNotActive, %gameexe1337%
+Return
+if FIXchat
+{
+	StructSize1337 := A_PtrSize + 16
+	VarSetCapacity(InfoStruct1337, StructSize1337)
+	NumPut(StructSize1337, InfoStruct1337)
+	DllCall("GetCursorInfo", UInt, &InfoStruct1337)
+	Result1337 := NumGet(InfoStruct1337, 8)
+	if (Result1337 <> 0)
+		Return
+}
+while(GetKeyState("vk33", "P")) 
+{
+SendInput {vk33}
+Sleep 22
+IfWinNotActive, %gameexe1337%
+Break
+if !(TumblerToglerFastpick3)
+Break
+}
+Return
+
+;=====================================быстрый выбор персонажа 4 слот
+Metkakey_fastpick4:
+TumblerToglerFastpick1 = 0
+TumblerToglerFastpick2 = 0
+TumblerToglerFastpick3 = 0
+TumblerToglerFastpick4 = 1
+Sleep 1
+IfWinNotActive, %gameexe1337%
+Return
+if FIXchat
+{
+	StructSize1337 := A_PtrSize + 16
+	VarSetCapacity(InfoStruct1337, StructSize1337)
+	NumPut(StructSize1337, InfoStruct1337)
+	DllCall("GetCursorInfo", UInt, &InfoStruct1337)
+	Result1337 := NumGet(InfoStruct1337, 8)
+	if (Result1337 <> 0)
+		Return
+}
+while(GetKeyState("vk34", "P")) 
+{
+SendInput {vk34}
+Sleep 22
+IfWinNotActive, %gameexe1337%
+Break
+if !(TumblerToglerFastpick4)
+Break
+}
+Return
 
 
 
@@ -1530,9 +1746,9 @@ IniWrite, %ScHachCh%, %FileVarImport2%, Setings, ScHachCh ; проверка ScH
 	IniRead, ScRandomT, %FileVarImport%, Setings, ScRandomT ; проверка рандом таймер
 	if !(ScRandomT = "ERROR")
 IniWrite, %ScRandomT%, %FileVarImport2%, Setings, ScRandomT ; проверка рандом таймер
-	IniRead, ScOverlay, %FileVarImport%, Setings, ScOverlay ; проверка uid overlay
-	if !(ScOverlay = "ERROR")
-IniWrite, %ScOverlay%, %FileVarImport2%, Setings, ScOverlay ; проверка uid overlay
+	IniRead, Fastpickcfg, %FileVarImport%, Setings, Fastpickcfg
+	if !(Fastpickcfg = "ERROR")
+IniWrite, %Fastpickcfg%, %FileVarImport2%, Setings, Fastpickcfg
 	IniRead, DefaultJopaTrue, %FileVarImport%, Extra, DefaultJopaTrue
 	if !(DefaultJopaTrue = "ERROR")
 IniWrite, %DefaultJopaTrue%, %FileVarImport2%, Extra, DefaultJopaTrue
@@ -3241,7 +3457,7 @@ jopa24:=false
 jopa25:=false
 if showtooltipVvoba
 {
-ToolTip, Xiao N1H1Plunge, 0, 0
+ToolTip, Xiao SpamPlunge(14j), 0, 0
 sleep 500
 ToolTip
 }
@@ -3276,7 +3492,7 @@ jopa24:=false
 jopa25:=false
 if showtooltipVvoba
 {
-ToolTip, Xiao SpamPlunge, 0, 0
+ToolTip, Xiao SpamPlunge(13j), 0, 0
 sleep 500
 ToolTip
 }
@@ -4402,7 +4618,7 @@ IfWinActive, %gameexe1337%
 }
 }
 
-if jopa14 							;_________________________Xiao N1H1Plunge
+if jopa14 							;_________________________Xiao сяо спам Plunge
 {
 if FIXchat
 {
@@ -4420,61 +4636,14 @@ IfWinActive, %gameexe1337%
 	{
 	if !GetKeyState(key_animcancel, "P")
 		Break
-	
-			SendInput {vk1}
-
+	SendInput {vk20}
 	if ScRandomT
 	Random, SuperGlobalVarRan,1,15
-	Sleep 210 + SuperGlobalVarRan
-
-			SendInput {vk1}
-
+	Sleep 25 + SuperGlobalVarRan
+	SendInput, {Blind}{vk1}
 	if ScRandomT
 	Random, SuperGlobalVarRan,1,15
-	Sleep 210 + SuperGlobalVarRan
-
-			SendInput {vk1 down}
-
-	if !GetKeyState(key_animcancel, "P")
-		Break
-
-	if ScRandomT
-	Random, SuperGlobalVarRan,1,15
-	Sleep 450 + SuperGlobalVarRan
-
-			SendInput {vk1 up}
-
-	if !GetKeyState(key_animcancel, "P")
-		Break
-
-	if ScRandomT
-	Random, SuperGlobalVarRan,1,15
-	Sleep 200 + SuperGlobalVarRan
-
-			SendInput {vk20}
-
-	if ScRandomT
-	Random, SuperGlobalVarRan,1,15
-	Sleep 160 + SuperGlobalVarRan
-
-			SendInput {vk1}
-
-	if !GetKeyState(key_animcancel, "P")
-		Break
-
-	if ScRandomT
-	Random, SuperGlobalVarRan,1,15
-	Sleep 800 + SuperGlobalVarRan
-
-			SendInput {vk2}
-
-	if !GetKeyState(key_animcancel, "P")
-		Break
-
-	if ScRandomT
-	Random, SuperGlobalVarRan,1,15
-	Sleep 100 + SuperGlobalVarRan
-	
+	Sleep 25 + SuperGlobalVarRan
 	}
 }
 }
@@ -6275,6 +6444,7 @@ IniWrite, %ONregreadDir%, data\genConfig.ini, Setings, ONregreadDir
 IniWrite, %CheckboxtooltipVvoba%, data\genConfig.ini, Setings, showtooltipVvoba
 
 
+IniWrite, %CheckboxFastpickcfg%, data\genConfig.ini, Setings, Fastpickcfg
 IniWrite, %CheckboxAutoExitAHK%, data\genConfig.ini, Setings, AutoExitAHK
 IniWrite, %CheckboxIsAdmin%, data\genConfig.ini, Setings, IsAdmin
 IniWrite, %CheckboxFIXchat%, data\genConfig.ini, Setings, FIXchat
@@ -6285,7 +6455,7 @@ IniWrite, %Checkboxshowmegui%, data\genConfig.ini, Setings, showmegui
 IniWrite, %CheckboxScWinrenamer%, data\genConfig.ini, Setings, ScWinrenamer
 IniWrite, %CheckboxScRenamer%, data\genConfig.ini, Setings, ScRenamer
 IniWrite, %CheckboxScScHachCh%, data\genConfig.ini, Setings, ScHachCh
-IniWrite, %CheckboxScOverlay%, data\genConfig.ini, Setings, ScOverlay
+; IniWrite, %CheckboxScOverlay%, data\genConfig.ini, Setings, ScOverlay
 IniWrite, %CheckboxScRandomT%, data\genConfig.ini, Setings, ScRandomT
 
 IniWrite, %Checkbox0map%, data\genConfig.ini, Setings, Checkbox1map
